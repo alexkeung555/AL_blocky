@@ -582,62 +582,123 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="hintTextDisplayer" type="RichTextLabel" parent="."]
+margin_left = 443.0
+margin_top = 26.0
+margin_right = 756.0
+margin_bottom = 68.0
+text = "Drag blocks to start!"
+scroll_following = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IO_type_string" type="RichTextLabel" parent="."]
+margin_left = 267.8
+margin_top = 135.281
+margin_right = 371.8
+margin_bottom = 163.281
+text = "IO Operation"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ALU_type_string" type="RichTextLabel" parent="."]
+margin_left = 427.936
+margin_top = 135.281
+margin_right = 531.936
+margin_bottom = 163.281
+text = "ALU Operation"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="br_type_string" type="RichTextLabel" parent="."]
+margin_left = 246.587
+margin_top = 300.203
+margin_right = 385.587
+margin_bottom = 329.203
+text = "Branching operation"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="br_type_string2" type="RichTextLabel" parent="."]
+margin_left = 418.044
+margin_top = 300.105
+margin_right = 550.044
+margin_bottom = 332.105
+text = "Memory Operation"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="br_type_string3" type="RichTextLabel" parent="."]
+margin_left = 591.641
+margin_top = 135.63
+margin_right = 689.641
+margin_bottom = 157.63
+text = "Halt Operation"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name=" IN" type="TouchScreenButton" parent="."]
-position = Vector2( 50.1105, 59.4721 )
+position = Vector2( 249.385, 159.859 )
 scale = Vector2( 0.12, 0.12 )
 normal = ExtResource( 5 )
 script = ExtResource( 2 )
 
 [node name="OUT" type="TouchScreenButton" parent="."]
-position = Vector2( 49.0632, 106.083 )
+position = Vector2( 250.586, 206.47 )
 scale = Vector2( 0.12, 0.12 )
 normal = ExtResource( 3 )
 script = ExtResource( 2 )
 
 [node name="ADD" type="TouchScreenButton" parent="."]
-position = Vector2( 215.577, 60.7352 )
+position = Vector2( 414.852, 161.122 )
 scale = Vector2( 0.12, 0.12 )
 normal = ExtResource( 6 )
 script = ExtResource( 2 )
 
 [node name="SUB" type="TouchScreenButton" parent="."]
-position = Vector2( 215.577, 107.455 )
+position = Vector2( 414.852, 207.842 )
 scale = Vector2( 0.12, 0.12 )
 normal = ExtResource( 10 )
 script = ExtResource( 2 )
 
 [node name=" BR" type="TouchScreenButton" parent="."]
-position = Vector2( 52.7262, 206.9 )
+position = Vector2( 250.503, 327.514 )
 scale = Vector2( 0.12, 0.12 )
 normal = ExtResource( 8 )
 script = ExtResource( 2 )
 
 [node name="BRZ" type="TouchScreenButton" parent="."]
-position = Vector2( 52.7262, 253.62 )
+position = Vector2( 250.503, 374.234 )
 scale = Vector2( 0.12, 0.12 )
 normal = ExtResource( 12 )
 script = ExtResource( 2 )
 
 [node name="BRP" type="TouchScreenButton" parent="."]
-position = Vector2( 52.7262, 298.337 )
+position = Vector2( 250.503, 418.951 )
 scale = Vector2( 0.12, 0.12 )
 normal = ExtResource( 7 )
 script = ExtResource( 2 )
 
 [node name="LDA" type="TouchScreenButton" parent="."]
-position = Vector2( 217.579, 207.568 )
+position = Vector2( 416.105, 328.182 )
 scale = Vector2( 0.12, 0.12 )
 normal = ExtResource( 11 )
 script = ExtResource( 2 )
 
 [node name="STO" type="TouchScreenButton" parent="."]
-position = Vector2( 218.246, 253.62 )
+position = Vector2( 416.772, 374.234 )
 scale = Vector2( 0.12, 0.12 )
 normal = ExtResource( 9 )
 script = ExtResource( 2 )
 
 [node name="HLT" type="TouchScreenButton" parent="."]
-position = Vector2( 53.033, 383.252 )
+position = Vector2( 578.939, 160.753 )
 scale = Vector2( 0.12, 0.12 )
 normal = ExtResource( 13 )
 script = ExtResource( 2 )

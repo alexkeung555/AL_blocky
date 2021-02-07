@@ -46,6 +46,7 @@ func _process(delta):
 
 func discardSingleSlotProperties():
         print("pressed " + String(slotNum))
+        
         slotDetailsObj[currentPageNumObj.pageNum] = SlotDetails.new()
         slotDetailsObj[currentPageNumObj.pageNum].slotNum = get_position_in_parent() - 1
         slotDetailsObj[currentPageNumObj.pageNum].typeString = ""
@@ -54,6 +55,7 @@ func discardSingleSlotProperties():
         slotDetailsObj[currentPageNumObj.pageNum].color = Color(1,1,1,1)
         slotDetailsObj[currentPageNumObj.pageNum].textColor =  Color(0,0,0,1)
         _on_page_changed()
+        get_parent().get_node("hintTextDisplayer").text = "Block discarded!"
 
 func resetProperties():
     
@@ -68,6 +70,7 @@ func resetProperties():
         
         
     _on_page_changed()
+    get_parent().get_node("hintTextDisplayer").text = "All blocks reset!"
 
 
 func _on_ColorRect_mouse_entered():
@@ -99,6 +102,8 @@ func _on_ColorRect_mouse_entered():
         in_button.inX = false
         in_button.inY = false
         in_button.setOriginalPos()
+        
+        get_parent().get_node("hintTextDisplayer").text = "You put a" + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
     
     if out_button.isDragging && out_button.inX && out_button.inY  :
         
@@ -114,6 +119,8 @@ func _on_ColorRect_mouse_entered():
         out_button.inX = false
         out_button.inY = false
         out_button.setOriginalPos()
+        
+        get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
     
     if add_button.isDragging && add_button.inX && add_button.inY  :
         
@@ -129,6 +136,8 @@ func _on_ColorRect_mouse_entered():
         add_button.inX = false
         add_button.inY = false
         add_button.setOriginalPos()
+        
+        get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
     
     if sub_button.isDragging && sub_button.inX && sub_button.inY  :
         
@@ -144,6 +153,8 @@ func _on_ColorRect_mouse_entered():
         sub_button.inX = false
         sub_button.inY = false
         sub_button.setOriginalPos()
+        
+        get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
     
     if br_button.isDragging && br_button.inX && br_button.inY  :
         
@@ -159,6 +170,8 @@ func _on_ColorRect_mouse_entered():
         br_button.inX = false
         br_button.inY = false
         br_button.setOriginalPos()
+        
+        get_parent().get_node("hintTextDisplayer").text = "You put a" + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
         
     if brz_button.isDragging && brz_button.inX && brz_button.inY  :
         
@@ -176,6 +189,8 @@ func _on_ColorRect_mouse_entered():
         brz_button.inY = false
         brz_button.setOriginalPos()
         
+        get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
+        
     if brp_button.isDragging && brp_button.inX && brp_button.inY  :
         
         slotDetailsObj[currentPageNumObj.pageNum].color = Color(1,0.597,0,1)
@@ -190,6 +205,8 @@ func _on_ColorRect_mouse_entered():
         brp_button.inX = false
         brp_button.inY = false
         brp_button.setOriginalPos()
+        
+        get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
         
     if lda_button.isDragging && lda_button.inX && lda_button.inY  :
         
@@ -206,6 +223,8 @@ func _on_ColorRect_mouse_entered():
         lda_button.inY = false
         lda_button.setOriginalPos()
         
+        get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
+        
     if sto_button.isDragging && sto_button.inX && sto_button.inY  :
         
         slotDetailsObj[currentPageNumObj.pageNum].color = Color(0,0,1,1)
@@ -221,6 +240,8 @@ func _on_ColorRect_mouse_entered():
         sto_button.inY = false
         sto_button.setOriginalPos()
         
+        get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
+        
     if hlt_button.isDragging && hlt_button.inX && hlt_button.inY  :
         
         slotDetailsObj[currentPageNumObj.pageNum].color = Color(0,0,0,1)
@@ -235,6 +256,8 @@ func _on_ColorRect_mouse_entered():
         hlt_button.inX = false
         hlt_button.inY = false
         hlt_button.setOriginalPos()
+        
+        get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
 
 func _on_Address_changed():
     address = get_node("Address").text         # set the address value after mouse entered
