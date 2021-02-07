@@ -12,140 +12,226 @@ var address
 var typeString
 var opCode
 
+var slotDetailsObj = [0,0,0,0,0,0,0,0,0,0,0]
+var originalSlotDetailsObj = [0,0,0,0,0,0,0,0,0,0,0]
+var currentPageNumObj
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-    slotNum = get_position_in_parent()
+    
+    currentPageNumObj = get_parent().get_node("pageNumDisplayText")
+    currentPageNumObj.pageNum = 1                                               #init page 1 
+    
+    for i in range(11):
+        slotDetailsObj[i] = SlotDetails.new()
+        slotDetailsObj[i].slotNum = get_position_in_parent() - 1
+        slotDetailsObj[i].typeString = ""
+        slotDetailsObj[i].address = get_node("Address").text
+        slotDetailsObj[i].opCode = 0
+        slotDetailsObj[i].color = Color(1,1,1,1)
+        slotDetailsObj[i].textColor =  Color(0,0,0,1)
+    
+    originalSlotDetailsObj = slotDetailsObj                                     #copy original details
+    
+    slotNum = get_position_in_parent() - 1
     typeString = get_node("typeString")
     address = get_node("Address").text
     opCode = 0
     print("Child Num: " + String(slotNum))
     
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#    pass
+func _process(delta):
+    pass
 
 func resetProperties():
-    color = Color(1,1,1,1)
-    typeString.set_text("")
-    typeString.set("custom_colors/default_color", Color(0,0,0,1))
-    opCode = 0
-    get_node("Address").text = "00"
-    address = 0
     
-    
+    for i in range(11):
+        slotDetailsObj[i] = SlotDetails.new()
+        slotDetailsObj[i].slotNum = get_position_in_parent() - 1
+        slotDetailsObj[i].typeString = ""
+        slotDetailsObj[i].address = "00"
+        slotDetailsObj[i].opCode = 0
+        slotDetailsObj[i].color = Color(1,1,1,1)
+        slotDetailsObj[i].textColor =  Color(0,0,0,1)
+        
+        
+    _on_page_changed()
+
 
 func _on_ColorRect_mouse_entered():
 
     print("Mouse Entered!" + String(address))
     
-    var in_button = get_parent().get_node("IN")
+    var in_button = get_parent().get_node(" IN")
     var out_button = get_parent().get_node("OUT")
     var add_button = get_parent().get_node("ADD")
     var sub_button = get_parent().get_node("SUB")
-    var br_button = get_parent().get_node("BR")
+    var br_button = get_parent().get_node(" BR")
     var brz_button = get_parent().get_node("BRZ")
     var brp_button = get_parent().get_node("BRP")
     var lda_button = get_parent().get_node("LDA")
     var sto_button = get_parent().get_node("STO")
     var hlt_button = get_parent().get_node("HLT")
     
-    
-    if in_button.isDragging && in_button.inX && in_button.inY  :
-        color = Color(0,1,0,1)
-        typeString.set_text(" IN")
-        opCode = 901
+    if in_button.isDragging && in_button.inX && in_button.inY :
+        
+        slotDetailsObj[currentPageNumObj.pageNum].color = Color(0,1,0,1)
+        slotDetailsObj[currentPageNumObj.pageNum].typeString = " IN"
+        slotDetailsObj[currentPageNumObj.pageNum].opCode = 901
+        
+        color = slotDetailsObj[currentPageNumObj.pageNum].color
+        typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
         
         in_button.inX = false
         in_button.inY = false
         in_button.setOriginalPos()
     
-    if out_button.isDragging && out_button.inX && out_button.inY :
-        color = Color(0,1,0,1)
-        typeString.set_text("OUT")
-        opCode = 902
+    if out_button.isDragging && out_button.inX && out_button.inY  :
+        
+        slotDetailsObj[currentPageNumObj.pageNum].color = Color(0,1,0,1)
+        slotDetailsObj[currentPageNumObj.pageNum].typeString = "OUT"
+        slotDetailsObj[currentPageNumObj.pageNum].opCode = 902
+        
+        color = slotDetailsObj[currentPageNumObj.pageNum].color
+        typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
         
         out_button.inX = false
         out_button.inY = false
         out_button.setOriginalPos()
     
-    if add_button.isDragging && add_button.inX && add_button.inY :
-        color = Color(1,1,0,1)
-        typeString.set_text("ADD")
-        opCode = 100
+    if add_button.isDragging && add_button.inX && add_button.inY  :
+        
+        slotDetailsObj[currentPageNumObj.pageNum].color = Color(1,1,0,1)
+        slotDetailsObj[currentPageNumObj.pageNum].typeString = "ADD"
+        slotDetailsObj[currentPageNumObj.pageNum].opCode = 100
+        
+        color = slotDetailsObj[currentPageNumObj.pageNum].color
+        typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
         
         add_button.inX = false
         add_button.inY = false
         add_button.setOriginalPos()
     
-    if sub_button.isDragging && sub_button.inX && sub_button.inY :
-        color = Color(1,1,0,1)
-        typeString.set_text("SUB")
-        opCode = 200
+    if sub_button.isDragging && sub_button.inX && sub_button.inY  :
+        
+        slotDetailsObj[currentPageNumObj.pageNum].color = Color(1,1,0,1)
+        slotDetailsObj[currentPageNumObj.pageNum].typeString = "SUB"
+        slotDetailsObj[currentPageNumObj.pageNum].opCode = 200
+        
+        color = Color(slotDetailsObj[currentPageNumObj.pageNum].color)
+        typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
         
         sub_button.inX = false
         sub_button.inY = false
         sub_button.setOriginalPos()
     
-    if br_button.isDragging && br_button.inX && br_button.inY :
-        color = Color(1,0.597,0,1)
-        typeString.set_text(" BR")
-        opCode = 600
+    if br_button.isDragging && br_button.inX && br_button.inY  :
+        
+        slotDetailsObj[currentPageNumObj.pageNum].color = Color(1,0.597,0,1)
+        slotDetailsObj[currentPageNumObj.pageNum].typeString = " BR"
+        slotDetailsObj[currentPageNumObj.pageNum].opCode = 600
+        
+        color = slotDetailsObj[currentPageNumObj.pageNum].color
+        typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
         
         br_button.inX = false
         br_button.inY = false
         br_button.setOriginalPos()
         
-    if brz_button.isDragging && brz_button.inX && brz_button.inY :
-        color = Color(1,0.597,0,1)
-        typeString.set_text("BRZ")
-        opCode = 700
+    if brz_button.isDragging && brz_button.inX && brz_button.inY  :
+        
+        slotDetailsObj[currentPageNumObj.pageNum].color = Color(1,0.597,0,1)
+        slotDetailsObj[currentPageNumObj.pageNum].typeString = "BRZ"
+        slotDetailsObj[currentPageNumObj.pageNum].opCode = 700
+        
+        color = slotDetailsObj[currentPageNumObj.pageNum].color
+        typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
+        
         
         brz_button.inX = false
         brz_button.inY = false
         brz_button.setOriginalPos()
         
-    if brp_button.isDragging && brp_button.inX && brp_button.inY :
-        color = Color(1,0.597,0,1)
-        typeString.set_text("BRP")
-        opCode = 800
+    if brp_button.isDragging && brp_button.inX && brp_button.inY  :
+        
+        slotDetailsObj[currentPageNumObj.pageNum].color = Color(1,0.597,0,1)
+        slotDetailsObj[currentPageNumObj.pageNum].typeString = "BRP"
+        slotDetailsObj[currentPageNumObj.pageNum].opCode = 800
+        
+        color = slotDetailsObj[currentPageNumObj.pageNum].color
+        typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
         
         brp_button.inX = false
         brp_button.inY = false
         brp_button.setOriginalPos()
         
-    if lda_button.isDragging && lda_button.inX && lda_button.inY :
-        color = Color(0,0,1,1)
-        typeString.set_text("LDA")
-        opCode = 500
+    if lda_button.isDragging && lda_button.inX && lda_button.inY  :
+        
+        slotDetailsObj[currentPageNumObj.pageNum].color = Color(0,0,1,1)
+        slotDetailsObj[currentPageNumObj.pageNum].typeString = "LDA"
+        slotDetailsObj[currentPageNumObj.pageNum].opCode = 500
+        
+        color = slotDetailsObj[currentPageNumObj.pageNum].color
+        typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
         
         lda_button.inX = false
         lda_button.inY = false
         lda_button.setOriginalPos()
         
-    if sto_button.isDragging && sto_button.inX && sto_button.inY :
-        color = Color(0,0,1,1)
-        typeString.set_text("STO")
-        opCode = 300
+    if sto_button.isDragging && sto_button.inX && sto_button.inY  :
+        
+        slotDetailsObj[currentPageNumObj.pageNum].color = Color(0,0,1,1)
+        slotDetailsObj[currentPageNumObj.pageNum].typeString = "STO"
+        slotDetailsObj[currentPageNumObj.pageNum].opCode = 300
+        
+        color = slotDetailsObj[currentPageNumObj.pageNum].color
+        typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
         
         sto_button.inX = false
         sto_button.inY = false
         sto_button.setOriginalPos()
         
-    if hlt_button.isDragging && hlt_button.inX && hlt_button.inY :
-        color = Color(0,0,0,1)
-        typeString.set_text("HLT")
-        typeString.set("custom_colors/default_color", Color(1,1,1,1))
-        opCode = 0
+    if hlt_button.isDragging && hlt_button.inX && hlt_button.inY  :
+        
+        slotDetailsObj[currentPageNumObj.pageNum].color = Color(0,0,0,1)
+        slotDetailsObj[currentPageNumObj.pageNum].typeString = "HLT"
+        slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (1,1,1,1)
+        slotDetailsObj[currentPageNumObj.pageNum].opCode = 0
+        
+        color = slotDetailsObj[currentPageNumObj.pageNum].color
+        typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
+        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         hlt_button.inX = false
         hlt_button.inY = false
         hlt_button.setOriginalPos()
 
-
 func _on_Address_changed():
     address = get_node("Address").text         # set the address value after mouse entered
+    slotDetailsObj[currentPageNumObj.pageNum].address = get_node("Address").text
+
+func _on_page_changed():
+    
+    currentPageNumObj = get_parent().get_node("pageNumDisplayText")
+    
+    color = slotDetailsObj[currentPageNumObj.pageNum].color
+    typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
+    typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
+    get_node("Address").set_text(slotDetailsObj[currentPageNumObj.pageNum].address)
+    get_parent().get_node("pageNumDisplayText").setBlockNum()                   # set block Number 
+
+
+class SlotDetails:
+    var slotNum
+    var address
+    var typeString
+    var opCode
+    var color : Color
+    var textColor : Color
+    
+
+
 
 
 
