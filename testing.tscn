@@ -23,10 +23,10 @@
 script = ExtResource( 17 )
 
 [node name="bg" type="ColorRect" parent="."]
-margin_left = 756.245
-margin_top = -2.41418
-margin_right = 1026.25
-margin_bottom = 595.586
+margin_left = 754.91
+margin_top = 0.922917
+margin_right = 1024.92
+margin_bottom = 598.923
 color = Color( 0.207843, 0.207843, 0.207843, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -719,9 +719,9 @@ __meta__ = {
 
 [node name="resetAllString" type="RichTextLabel" parent="."]
 margin_left = 959.71
-margin_top = 44.4657
+margin_top = 47.8028
 margin_right = 1014.71
-margin_bottom = 61.4657
+margin_bottom = 64.8028
 custom_colors/default_color = Color( 1, 0.14902, 0.14902, 1 )
 text = "Reset all"
 __meta__ = {

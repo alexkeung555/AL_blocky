@@ -12,8 +12,8 @@ var address
 var typeString
 var opCode
 
-var slotDetailsObj = [0,0,0,0,0,0,0,0,0,0,0]
-var originalSlotDetailsObj = [0,0,0,0,0,0,0,0,0,0,0]
+var slotDetailsObj = [0,0,0,0,0,0,0,0,0,0,0]               # 0 not access
+var originalSlotDetailsObj = [0,0,0,0,0,0,0,0,0,0,0]       #
 var currentPageNumObj
 
 # Called when the node enters the scene tree for the first time.
@@ -37,12 +37,13 @@ func _ready():
     typeString = get_node("typeString")
     address = get_node("Address").text
     opCode = 0
-    print("Child Num: " + String(slotNum))
+    
     
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
     pass
+    
 
 func discardSingleSlotProperties():
         print("pressed " + String(slotNum))
@@ -68,14 +69,11 @@ func resetProperties():
         slotDetailsObj[i].color = Color(1,1,1,1)
         slotDetailsObj[i].textColor =  Color(0,0,0,1)
         
-        
     _on_page_changed()
-    get_parent().get_node("hintTextDisplayer").text = "All blocks reset!"
+    get_parent().get_node("hintTextDisplayer").text = "All slots reset!"
 
 
 func _on_ColorRect_mouse_entered():
-
-    print("Mouse Entered!" + String(address))
     
     var in_button = get_parent().get_node(" IN")
     var out_button = get_parent().get_node("OUT")
@@ -184,12 +182,13 @@ func _on_ColorRect_mouse_entered():
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
         typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
-        
         brz_button.inX = false
         brz_button.inY = false
         brz_button.setOriginalPos()
         
         get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
+        get_parent().get_node("pageNumDisplayText").checkBranching()
+        get_parent().get_node("pageNumDisplayText").setBlockNum()
         
     if brp_button.isDragging && brp_button.inX && brp_button.inY  :
         
@@ -207,6 +206,9 @@ func _on_ColorRect_mouse_entered():
         brp_button.setOriginalPos()
         
         get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
+        get_parent().get_node("pageNumDisplayText").checkBranching()
+        get_parent().get_node("pageNumDisplayText").setBlockNum()
+        
         
     if lda_button.isDragging && lda_button.inX && lda_button.inY  :
         
@@ -258,10 +260,15 @@ func _on_ColorRect_mouse_entered():
         hlt_button.setOriginalPos()
         
         get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
+    
+
 
 func _on_Address_changed():
+    
     address = get_node("Address").text         # set the address value after mouse entered
     slotDetailsObj[currentPageNumObj.pageNum].address = get_node("Address").text
+    get_parent().get_node("pageNumDisplayText").checkBranching()
+    get_parent().get_node("pageNumDisplayText").setBlockNum()
 
 func _on_page_changed():
     
@@ -271,8 +278,9 @@ func _on_page_changed():
     typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
     typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
     get_node("Address").set_text(slotDetailsObj[currentPageNumObj.pageNum].address)
+    get_parent().get_node("pageNumDisplayText").checkBranching()
     get_parent().get_node("pageNumDisplayText").setBlockNum()                   # set block Number 
-
+    
 
 class SlotDetails:
     var slotNum

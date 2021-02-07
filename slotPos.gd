@@ -198,13 +198,13 @@ func _input(event):
         # check mouse within the box
         if event.position.x > get_parent().rect_position.x && event.position.x < get_parent().rect_position.x + sizeX : 
             inX = true
-            print("in X")
+            
         else:
             inX = false
         
         if event.position.y > get_parent().rect_position.y && event.position.y < get_parent().rect_position.y + sizeY: 
             inY = true
-            print("in Y")
+            
         else:
             inY = false
         
