@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://pageNumController.gd" type="Script" id=1]
 [ext_resource path="res://log.gd" type="Script" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://resetAll.gd" type="Script" id=15]
 [ext_resource path="res://slotPos.gd" type="Script" id=16]
 [ext_resource path="res://root.gd" type="Script" id=17]
+[ext_resource path="res://buttonIcon/trashCan.png" type="Texture" id=18]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 17 )
@@ -76,6 +77,16 @@ __meta__ = {
 [node name="Position2D" type="Position2D" parent="slot0"]
 script = ExtResource( 16 )
 
+[node name="discardButton" type="Button" parent="slot0"]
+margin_left = 155.0
+margin_right = 167.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.05, 0.05 )
+icon = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="slot1" type="ColorRect" parent="."]
 margin_left = 834.234
 margin_top = 135.96
@@ -120,6 +131,16 @@ __meta__ = {
 
 [node name="Position2D" type="Position2D" parent="slot1"]
 script = ExtResource( 16 )
+
+[node name="discardButton" type="Button" parent="slot1"]
+margin_left = 155.0
+margin_right = 679.0
+margin_bottom = 518.0
+rect_scale = Vector2( 0.05, 0.05 )
+icon = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="slot2" type="ColorRect" parent="."]
 margin_left = 834.234
@@ -166,6 +187,16 @@ __meta__ = {
 [node name="Position2D" type="Position2D" parent="slot2"]
 script = ExtResource( 16 )
 
+[node name="discardButton" type="Button" parent="slot2"]
+margin_left = 155.0
+margin_right = 167.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.05, 0.05 )
+icon = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="slot3" type="ColorRect" parent="."]
 margin_left = 834.234
 margin_top = 215.96
@@ -210,6 +241,16 @@ __meta__ = {
 
 [node name="Position2D" type="Position2D" parent="slot3"]
 script = ExtResource( 16 )
+
+[node name="discardButton" type="Button" parent="slot3"]
+margin_left = 155.0
+margin_right = 167.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.05, 0.05 )
+icon = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="slot4" type="ColorRect" parent="."]
 margin_left = 834.234
@@ -256,6 +297,16 @@ __meta__ = {
 [node name="Position2D" type="Position2D" parent="slot4"]
 script = ExtResource( 16 )
 
+[node name="discardButton" type="Button" parent="slot4"]
+margin_left = 155.0
+margin_right = 679.0
+margin_bottom = 518.0
+rect_scale = Vector2( 0.05, 0.05 )
+icon = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="slot5" type="ColorRect" parent="."]
 margin_left = 834.234
 margin_top = 295.96
@@ -300,6 +351,16 @@ __meta__ = {
 
 [node name="Position2D" type="Position2D" parent="slot5"]
 script = ExtResource( 16 )
+
+[node name="discardButton" type="Button" parent="slot5"]
+margin_left = 155.0
+margin_right = 679.0
+margin_bottom = 518.0
+rect_scale = Vector2( 0.05, 0.05 )
+icon = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="slot6" type="ColorRect" parent="."]
 margin_left = 834.234
@@ -346,6 +407,16 @@ __meta__ = {
 [node name="Position2D" type="Position2D" parent="slot6"]
 script = ExtResource( 16 )
 
+[node name="discardButton" type="Button" parent="slot6"]
+margin_left = 155.0
+margin_right = 167.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.05, 0.05 )
+icon = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="slot7" type="ColorRect" parent="."]
 margin_left = 834.234
 margin_top = 375.96
@@ -390,6 +461,16 @@ __meta__ = {
 
 [node name="Position2D" type="Position2D" parent="slot7"]
 script = ExtResource( 16 )
+
+[node name="discardButton" type="Button" parent="slot7"]
+margin_left = 155.0
+margin_right = 679.0
+margin_bottom = 518.0
+rect_scale = Vector2( 0.05, 0.05 )
+icon = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="slot8" type="ColorRect" parent="."]
 margin_left = 834.234
@@ -436,6 +517,16 @@ __meta__ = {
 [node name="Position2D" type="Position2D" parent="slot8"]
 script = ExtResource( 16 )
 
+[node name="discardButton" type="Button" parent="slot8"]
+margin_left = 155.0
+margin_right = 679.0
+margin_bottom = 518.0
+rect_scale = Vector2( 0.05, 0.05 )
+icon = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="slot9" type="ColorRect" parent="."]
 margin_left = 834.234
 margin_top = 455.96
@@ -480,6 +571,16 @@ __meta__ = {
 
 [node name="Position2D" type="Position2D" parent="slot9"]
 script = ExtResource( 16 )
+
+[node name="discardButton" type="Button" parent="slot9"]
+margin_left = 155.0
+margin_right = 679.0
+margin_bottom = 518.0
+rect_scale = Vector2( 0.05, 0.05 )
+icon = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name=" IN" type="TouchScreenButton" parent="."]
 position = Vector2( 50.1105, 59.4721 )
@@ -604,33 +705,43 @@ position = Vector2( 523.658, 403.045 )
 scale = Vector2( 0.1, 0.1 )
 [connection signal="mouse_entered" from="slot0" to="slot0" method="_on_ColorRect_mouse_entered"]
 [connection signal="text_changed" from="slot0/Address" to="slot0" method="_on_Address_changed"]
+[connection signal="pressed" from="slot0/discardButton" to="slot0" method="discardSingleSlotProperties"]
 [connection signal="mouse_entered" from="slot1" to="slot1" method="_on_ColorRect_mouse_entered"]
 [connection signal="text_changed" from="slot1/Address" to="slot1" method="_on_Address_text_changed"]
+[connection signal="pressed" from="slot1/discardButton" to="slot1" method="discardSingleSlotProperties"]
 [connection signal="mouse_entered" from="slot2" to="slot2" method="_on_ColorRect_mouse_entered"]
 [connection signal="text_changed" from="slot2/Address" to="slot2" method="_on_Address_changed"]
+[connection signal="pressed" from="slot2/discardButton" to="slot2" method="discardSingleSlotProperties"]
 [connection signal="mouse_entered" from="slot3" to="slot3" method="_on_ColorRect_mouse_entered"]
 [connection signal="text_changed" from="slot3/Address" to="slot3" method="_on_Address_changed"]
+[connection signal="pressed" from="slot3/discardButton" to="slot3" method="discardSingleSlotProperties"]
 [connection signal="mouse_entered" from="slot4" to="slot4" method="_on_ColorRect_mouse_entered"]
 [connection signal="text_changed" from="slot4/Address" to="slot4" method="_on_Address_changed"]
+[connection signal="pressed" from="slot4/discardButton" to="slot4" method="discardSingleSlotProperties"]
 [connection signal="mouse_entered" from="slot5" to="slot5" method="_on_ColorRect_mouse_entered"]
 [connection signal="text_changed" from="slot5/Address" to="slot5" method="_on_Address_changed"]
+[connection signal="pressed" from="slot5/discardButton" to="slot5" method="discardSingleSlotProperties"]
 [connection signal="mouse_entered" from="slot6" to="slot6" method="_on_ColorRect_mouse_entered"]
 [connection signal="text_changed" from="slot6/Address" to="slot6" method="_on_Address_changed"]
+[connection signal="pressed" from="slot6/discardButton" to="slot6" method="discardSingleSlotProperties"]
 [connection signal="mouse_entered" from="slot7" to="slot7" method="_on_ColorRect_mouse_entered"]
 [connection signal="text_changed" from="slot7/Address" to="slot7" method="_on_Address_changed"]
+[connection signal="pressed" from="slot7/discardButton" to="slot7" method="discardSingleSlotProperties"]
 [connection signal="mouse_entered" from="slot8" to="slot8" method="_on_ColorRect_mouse_entered"]
 [connection signal="text_changed" from="slot8/Address" to="slot8" method="_on_Address_changed"]
+[connection signal="pressed" from="slot8/discardButton" to="slot8" method="discardSingleSlotProperties"]
 [connection signal="mouse_entered" from="slot9" to="slot9" method="_on_ColorRect_mouse_entered"]
 [connection signal="text_changed" from="slot9/Address" to="slot9" method="_on_Address_changed"]
-[connection signal="pressed" from="resetAllButton" to="slot3" method="resetProperties"]
-[connection signal="pressed" from="resetAllButton" to="slot8" method="resetProperties"]
-[connection signal="pressed" from="resetAllButton" to="slot5" method="resetProperties"]
-[connection signal="pressed" from="resetAllButton" to="slot0" method="resetProperties"]
-[connection signal="pressed" from="resetAllButton" to="slot2" method="resetProperties"]
-[connection signal="pressed" from="resetAllButton" to="slot6" method="resetProperties"]
-[connection signal="pressed" from="resetAllButton" to="slot4" method="resetProperties"]
+[connection signal="pressed" from="slot9/discardButton" to="slot9" method="discardSingleSlotProperties"]
 [connection signal="pressed" from="resetAllButton" to="slot7" method="resetProperties"]
 [connection signal="pressed" from="resetAllButton" to="slot1" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot3" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot4" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot6" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot2" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot5" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot0" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot8" method="resetProperties"]
 [connection signal="pressed" from="resetAllButton" to="slot9" method="resetProperties"]
 [connection signal="pressed" from="previousPage" to="pageNumDisplayText" method="previousPagePressed"]
 [connection signal="pressed" from="nextPage" to="pageNumDisplayText" method="nextPagePressed"]

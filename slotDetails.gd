@@ -44,6 +44,17 @@ func _ready():
 func _process(delta):
     pass
 
+func discardSingleSlotProperties():
+        print("pressed " + String(slotNum))
+        slotDetailsObj[currentPageNumObj.pageNum] = SlotDetails.new()
+        slotDetailsObj[currentPageNumObj.pageNum].slotNum = get_position_in_parent() - 1
+        slotDetailsObj[currentPageNumObj.pageNum].typeString = ""
+        slotDetailsObj[currentPageNumObj.pageNum].address = "00"
+        slotDetailsObj[currentPageNumObj.pageNum].opCode = 0
+        slotDetailsObj[currentPageNumObj.pageNum].color = Color(1,1,1,1)
+        slotDetailsObj[currentPageNumObj.pageNum].textColor =  Color(0,0,0,1)
+        _on_page_changed()
+
 func resetProperties():
     
     for i in range(11):
@@ -77,11 +88,13 @@ func _on_ColorRect_mouse_entered():
     if in_button.isDragging && in_button.inX && in_button.inY :
         
         slotDetailsObj[currentPageNumObj.pageNum].color = Color(0,1,0,1)
+        slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
         slotDetailsObj[currentPageNumObj.pageNum].typeString = " IN"
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 901
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
+        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         in_button.inX = false
         in_button.inY = false
@@ -90,11 +103,13 @@ func _on_ColorRect_mouse_entered():
     if out_button.isDragging && out_button.inX && out_button.inY  :
         
         slotDetailsObj[currentPageNumObj.pageNum].color = Color(0,1,0,1)
+        slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
         slotDetailsObj[currentPageNumObj.pageNum].typeString = "OUT"
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 902
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
+        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         out_button.inX = false
         out_button.inY = false
@@ -103,11 +118,13 @@ func _on_ColorRect_mouse_entered():
     if add_button.isDragging && add_button.inX && add_button.inY  :
         
         slotDetailsObj[currentPageNumObj.pageNum].color = Color(1,1,0,1)
+        slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
         slotDetailsObj[currentPageNumObj.pageNum].typeString = "ADD"
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 100
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
+        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         add_button.inX = false
         add_button.inY = false
@@ -116,11 +133,13 @@ func _on_ColorRect_mouse_entered():
     if sub_button.isDragging && sub_button.inX && sub_button.inY  :
         
         slotDetailsObj[currentPageNumObj.pageNum].color = Color(1,1,0,1)
+        slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
         slotDetailsObj[currentPageNumObj.pageNum].typeString = "SUB"
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 200
         
         color = Color(slotDetailsObj[currentPageNumObj.pageNum].color)
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
+        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         sub_button.inX = false
         sub_button.inY = false
@@ -129,11 +148,13 @@ func _on_ColorRect_mouse_entered():
     if br_button.isDragging && br_button.inX && br_button.inY  :
         
         slotDetailsObj[currentPageNumObj.pageNum].color = Color(1,0.597,0,1)
+        slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
         slotDetailsObj[currentPageNumObj.pageNum].typeString = " BR"
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 600
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
+        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         br_button.inX = false
         br_button.inY = false
@@ -142,11 +163,13 @@ func _on_ColorRect_mouse_entered():
     if brz_button.isDragging && brz_button.inX && brz_button.inY  :
         
         slotDetailsObj[currentPageNumObj.pageNum].color = Color(1,0.597,0,1)
+        slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
         slotDetailsObj[currentPageNumObj.pageNum].typeString = "BRZ"
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 700
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
+        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         
         brz_button.inX = false
@@ -156,11 +179,13 @@ func _on_ColorRect_mouse_entered():
     if brp_button.isDragging && brp_button.inX && brp_button.inY  :
         
         slotDetailsObj[currentPageNumObj.pageNum].color = Color(1,0.597,0,1)
+        slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
         slotDetailsObj[currentPageNumObj.pageNum].typeString = "BRP"
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 800
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
+        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         brp_button.inX = false
         brp_button.inY = false
@@ -169,11 +194,13 @@ func _on_ColorRect_mouse_entered():
     if lda_button.isDragging && lda_button.inX && lda_button.inY  :
         
         slotDetailsObj[currentPageNumObj.pageNum].color = Color(0,0,1,1)
+        slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
         slotDetailsObj[currentPageNumObj.pageNum].typeString = "LDA"
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 500
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
+        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         lda_button.inX = false
         lda_button.inY = false
@@ -182,11 +209,13 @@ func _on_ColorRect_mouse_entered():
     if sto_button.isDragging && sto_button.inX && sto_button.inY  :
         
         slotDetailsObj[currentPageNumObj.pageNum].color = Color(0,0,1,1)
+        slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
         slotDetailsObj[currentPageNumObj.pageNum].typeString = "STO"
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 300
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
+        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         sto_button.inX = false
         sto_button.inY = false

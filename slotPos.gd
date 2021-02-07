@@ -5,6 +5,8 @@ extends Position2D
 # var a = 2
 # var b = "text"
 
+var previousDirection
+var directionLock
 var previousMousePos
 var direction : bool
 var originalTreeIndex
@@ -31,6 +33,7 @@ var swapped = [false,false,false,false,false,false,false,false,false,false]
 # Called when the node enters the scene tree for the first time.
 func _ready():
     
+    directionLock = false
     direction = true
     targetTreeIndexOffset = 1
     blockNum= int(get_parent().get_node("blockNum").text)
@@ -61,10 +64,15 @@ func _process(delta):
         else:
             direction = false
     
-    print("Direction: " + String(direction))
+    if !directionLock:
+        previousDirection = direction
+        directionLock = true
     
     if isDragging && inX && inY :
         #print("slot should move")
+        
+        if previousMousePos == null:
+            return
         
         var IconTexture
         var pageNum = get_parent().currentPageNumObj.pageNum
@@ -81,20 +89,31 @@ func _process(delta):
                 get_parent().get_parent().draggingIconIsDisplaying = true
                 
         get_parent().get_parent().get_node("DraggingIcon").visible = true
-        get_parent().get_parent().get_node("DraggingIcon").position.x = get_parent().rect_position.x
-        get_parent().get_parent().get_node("DraggingIcon").position.y = desiredPos.y
+        
+        if desiredPos.y < originalPosYinPageAray[0]-1 || desiredPos.y > originalPosYinPageAray[9]-1:
+            pass
+        else:
+            get_parent().get_parent().get_node("DraggingIcon").position.x = get_parent().rect_position.x
+            get_parent().get_parent().get_node("DraggingIcon").position.y = desiredPos.y
+        
         
         
         var inSlotOrder = int(desiredPos.y - originalPosYinPageAray[0]) % 40
         targetSlotNum = int(desiredPos.y - originalPosYinPageAray[0]) / 40
+        
+        
+        if previousDirection != direction:
+            directionLock = false
+            return
+        
             
-        if inSlotOrder <= 5:                                                                                                                    # set value based on rendering speed, lower speed sys might have to set higher value
+        if inSlotOrder <= 3:                                                                                                                    # set value based on rendering speed, lower speed sys might have to set higher value
             
             if targetSlotNum-1 < 0 ||  targetSlotNum > 9:                                       # upper and lower swap limit
                 return
             
             slotNumForDroppingBlock = targetSlotNum
-            print("up: " +  String(targetSlotNum-1) + " down: " + String(targetSlotNum))
+            #print("up: " +  String(targetSlotNum-1) + " down: " + String(targetSlotNum))
             
             if swapped[targetSlotNum]:           # avoid duplicate swapping
                 return
@@ -150,6 +169,8 @@ func _process(delta):
             swapped[targetSlotNum] = true
             print("swapped")
             
+            
+            
             #if desiredPos.y > slotPosYinPageArray[blockNum + targetTreeIndexOffset] :
             
             #get_parent().get_node("typeString").text = typeString
@@ -168,8 +189,6 @@ func _process(delta):
         
         #else:
             #get_parent().get_parent().get_node("slot" + String(originalTreeIndex-1)).rect_position.y = originalPosYinPageAray[originalTreeIndex-1] + offset
-
-
 
 func _input(event):
    # Mouse in viewport coordinates.
@@ -199,16 +218,26 @@ func _input(event):
             
             if slotNumForDroppingBlock != null:
                 
-                var pageNum = get_parent().currentPageNumObj.pageNum
-                get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).color = get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).slotDetailsObj[pageNum].color                                                          # update slots
-                get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).get_node("typeString").text = get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).slotDetailsObj[pageNum].typeString
-                get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).get_node("typeString").set("custom_colors/default_color", get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).slotDetailsObj[pageNum].textColor)
-                get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).get_node("Address").text = get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).slotDetailsObj[pageNum].address
+                if direction:
+                    var pageNum = get_parent().currentPageNumObj.pageNum
+                    get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).color = get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).slotDetailsObj[pageNum].color                                                          # update slots
+                    get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).get_node("typeString").text = get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).slotDetailsObj[pageNum].typeString
+                    get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).get_node("typeString").set("custom_colors/default_color", get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).slotDetailsObj[pageNum].textColor)
+                    get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).get_node("Address").text = get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).slotDetailsObj[pageNum].address
+                else:
+                    var pageNum = get_parent().currentPageNumObj.pageNum
+                    get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock-1)).color = get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock-1)).slotDetailsObj[pageNum].color                                                          # update slots
+                    get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock-1)).get_node("typeString").text = get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock-1)).slotDetailsObj[pageNum].typeString
+                    get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock-1)).get_node("typeString").set("custom_colors/default_color", get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock-1)).slotDetailsObj[pageNum].textColor)
+                    get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock-1)).get_node("Address").text = get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock-1)).slotDetailsObj[pageNum].address
+                
                 
                 get_parent().get_parent().draggingIconIsDisplaying = false
                 get_parent().get_parent().get_node("pageNumDisplayText").notifyPageChanged()
                 print("dropping"  + String(slotNumForDroppingBlock))
                 print(swapped)
+                
+                directionLock = false
                 
                 for i in range(10):
                     swapped[i] = false
