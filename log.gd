@@ -34,7 +34,7 @@ func _process(delta):
     
     if isDragging && inX && inY:
         set_position(desiredPos)
-        get_parent().get_node("hintTextDisplayer").text = ""
+        get_parent().get_node("hintTextDisplayer").text = "You can drop the block in any slot!"
         
 
 func setOriginalPos():

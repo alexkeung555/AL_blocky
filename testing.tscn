@@ -583,10 +583,10 @@ __meta__ = {
 }
 
 [node name="hintTextDisplayer" type="RichTextLabel" parent="."]
-margin_left = 443.0
-margin_top = 26.0
-margin_right = 756.0
-margin_bottom = 68.0
+margin_left = 447.95
+margin_top = 22.4645
+margin_right = 760.95
+margin_bottom = 64.4645
 text = "Drag blocks to start!"
 scroll_following = true
 __meta__ = {
