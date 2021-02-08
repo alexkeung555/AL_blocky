@@ -1,6 +1,6 @@
 extends Reference
 
-class LinkedListItem:
+class List:
     extends Reference
     var head;
     var next = node.new(null,null);
@@ -21,11 +21,11 @@ class LinkedListItem:
             newnode.nextNode = next;
             next = newnode;
         else:
-            var currIndex = 1;
             var currNode = next;
-            while (Index > currIndex):
-                currIndex+=1;
+            while (Index > currNode.index):
                 currNode = currNode.nextNode;
+                if currNode == null:
+                    break
             var newnode = node.new(Index,x);
             newnode.data = x;
             newnode.nextNode = currNode.nextNode;
@@ -63,4 +63,4 @@ class node:
     func _init(number,x):
         var data = x;
         var index = number;
-
+        
