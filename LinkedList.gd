@@ -14,20 +14,21 @@ class List:
         elif(Index==0 && next.data ==null):
             var newnode = node.new(Index,x);
             newnode.data = x;
+            newnode.index = Index;
             next = newnode;
         elif(Index==0):
             var newnode = node.new(Index,x);
             newnode.data = x;
+            newnode.index = Index;
             newnode.nextNode = next;
             next = newnode;
         else:
             var currNode = next;
-            while (Index > currNode.index):
+            while (currNode.index != Index && currNode.nextNode!=null):
                 currNode = currNode.nextNode;
-                if currNode == null:
-                    break
             var newnode = node.new(Index,x);
             newnode.data = x;
+            newnode.index = Index;
             newnode.nextNode = currNode.nextNode;
             newnode.preNode = currNode;
             currNode.nextNode = newnode;
