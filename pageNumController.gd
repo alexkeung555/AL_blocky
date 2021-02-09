@@ -31,7 +31,6 @@ func setBlockNum():
         
         for x in slotNumShouldChangeColor:
             if x == i+pageNumberOffset:
-                print("x: " + String(x) + "   i+pageNumberOffset: " + String(i+pageNumberOffset))
                 get_parent().get_node("slot" + String(i) + "/blockNum").set("custom_colors/default_color", Color(1,0.597,0,1))
             
     

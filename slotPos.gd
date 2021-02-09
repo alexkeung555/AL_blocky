@@ -124,24 +124,28 @@ func _process(delta):
             var textColor
             var address
             var opCode
+            var addressBinding
             
             color = get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].color                                                                                                #move value to temp
             typeString = get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].typeString
             textColor = get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].textColor
             address = get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].address
             opCode = get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].opCode
+            addressBinding = get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].addressBinding
             
             get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].typeString = get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].typeString            #swap text from down to up
             get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].color = get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].color
             get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].opCode = get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].opCode
             get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].textColor = get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].textColor
             get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].address = get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].address
+            get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].addressBinding = get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].addressBinding
             
             get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].typeString = typeString                                                                                                            #swap text from temp to up
             get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].color = color
             get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].opCode = opCode
             get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].address = address
             get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].textColor = textColor
+            get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].addressBinding = addressBinding
             
             #get_parent().get_parent().get_node("pageNumDisplayText").notifyPageChanged()
             
@@ -150,6 +154,7 @@ func _process(delta):
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).get_node("typeString").text = get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].typeString
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).get_node("typeString").set("custom_colors/default_color", get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].textColor)
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).get_node("Address").text = get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].address
+                #get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).get_node("Address").set_visible(get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].addressBinding)          # binding address slot
             
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum)).color = Color(1,1,1,1)
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum)).get_node("typeString").text = ""
@@ -160,6 +165,7 @@ func _process(delta):
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum)).get_node("typeString").text = get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].typeString
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum)).get_node("typeString").set("custom_colors/default_color", get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].textColor)
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum)).get_node("Address").text = get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].address
+                #get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).get_node("Address").set_visible(get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].addressBinding)
             
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).color = Color(1,1,1,1)
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).get_node("typeString").text = ""
@@ -169,7 +175,7 @@ func _process(delta):
             swapped[targetSlotNum] = true
             print("swapped")
             
-            
+            get_parent().get_parent().updateSlots()
             
             #if desiredPos.y > slotPosYinPageArray[blockNum + targetTreeIndexOffset] :
             

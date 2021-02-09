@@ -30,6 +30,7 @@ func _ready():
         slotDetailsObj[i].opCode = 0
         slotDetailsObj[i].color = Color(1,1,1,1)
         slotDetailsObj[i].textColor =  Color(0,0,0,1)
+        slotDetailsObj[i].addressBinding = false
     
     originalSlotDetailsObj = slotDetailsObj                                     #copy original details
     
@@ -92,6 +93,8 @@ func _on_ColorRect_mouse_entered():
         slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
         slotDetailsObj[currentPageNumObj.pageNum].typeString = " IN"
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 901
+        slotDetailsObj[currentPageNumObj.pageNum].address = "00"
+        slotDetailsObj[currentPageNumObj.pageNum].addressBinding = true
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
@@ -101,6 +104,7 @@ func _on_ColorRect_mouse_entered():
         in_button.inY = false
         in_button.setOriginalPos()
         
+        get_node("Address").set_visible(!slotDetailsObj[currentPageNumObj.pageNum].addressBinding)          # binding address slot
         get_parent().get_node("hintTextDisplayer").text = "You put a" + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
     
     if out_button.isDragging && out_button.inX && out_button.inY  :
@@ -109,6 +113,8 @@ func _on_ColorRect_mouse_entered():
         slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
         slotDetailsObj[currentPageNumObj.pageNum].typeString = "OUT"
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 902
+        slotDetailsObj[currentPageNumObj.pageNum].address = "00"
+        slotDetailsObj[currentPageNumObj.pageNum].addressBinding = true
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
@@ -118,6 +124,7 @@ func _on_ColorRect_mouse_entered():
         out_button.inY = false
         out_button.setOriginalPos()
         
+        get_node("Address").set_visible(!slotDetailsObj[currentPageNumObj.pageNum].addressBinding)          # binding address slot
         get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
     
     if add_button.isDragging && add_button.inX && add_button.inY  :
@@ -126,6 +133,7 @@ func _on_ColorRect_mouse_entered():
         slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
         slotDetailsObj[currentPageNumObj.pageNum].typeString = "ADD"
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 100
+        slotDetailsObj[currentPageNumObj.pageNum].addressBinding = false
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
@@ -135,6 +143,7 @@ func _on_ColorRect_mouse_entered():
         add_button.inY = false
         add_button.setOriginalPos()
         
+        get_node("Address").set_visible(!slotDetailsObj[currentPageNumObj.pageNum].addressBinding)          # binding address slot
         get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
     
     if sub_button.isDragging && sub_button.inX && sub_button.inY  :
@@ -143,6 +152,7 @@ func _on_ColorRect_mouse_entered():
         slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
         slotDetailsObj[currentPageNumObj.pageNum].typeString = "SUB"
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 200
+        slotDetailsObj[currentPageNumObj.pageNum].addressBinding = false
         
         color = Color(slotDetailsObj[currentPageNumObj.pageNum].color)
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
@@ -152,6 +162,7 @@ func _on_ColorRect_mouse_entered():
         sub_button.inY = false
         sub_button.setOriginalPos()
         
+        get_node("Address").set_visible(!slotDetailsObj[currentPageNumObj.pageNum].addressBinding)          # binding address slot
         get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
     
     if br_button.isDragging && br_button.inX && br_button.inY  :
@@ -160,6 +171,7 @@ func _on_ColorRect_mouse_entered():
         slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
         slotDetailsObj[currentPageNumObj.pageNum].typeString = " BR"
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 600
+        slotDetailsObj[currentPageNumObj.pageNum].addressBinding = false
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
@@ -169,6 +181,7 @@ func _on_ColorRect_mouse_entered():
         br_button.inY = false
         br_button.setOriginalPos()
         
+        get_node("Address").set_visible(!slotDetailsObj[currentPageNumObj.pageNum].addressBinding)          # binding address slot
         get_parent().get_node("hintTextDisplayer").text = "You put a" + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
         
     if brz_button.isDragging && brz_button.inX && brz_button.inY  :
@@ -177,6 +190,7 @@ func _on_ColorRect_mouse_entered():
         slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
         slotDetailsObj[currentPageNumObj.pageNum].typeString = "BRZ"
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 700
+        slotDetailsObj[currentPageNumObj.pageNum].addressBinding = false
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
@@ -186,6 +200,7 @@ func _on_ColorRect_mouse_entered():
         brz_button.inY = false
         brz_button.setOriginalPos()
         
+        get_node("Address").set_visible(!slotDetailsObj[currentPageNumObj.pageNum].addressBinding)          # binding address slot
         get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
         get_parent().get_node("pageNumDisplayText").checkBranching()
         get_parent().get_node("pageNumDisplayText").setBlockNum()
@@ -196,6 +211,7 @@ func _on_ColorRect_mouse_entered():
         slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
         slotDetailsObj[currentPageNumObj.pageNum].typeString = "BRP"
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 800
+        slotDetailsObj[currentPageNumObj.pageNum].addressBinding = false
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
@@ -205,6 +221,7 @@ func _on_ColorRect_mouse_entered():
         brp_button.inY = false
         brp_button.setOriginalPos()
         
+        get_node("Address").set_visible(!slotDetailsObj[currentPageNumObj.pageNum].addressBinding)          # binding address slot
         get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
         get_parent().get_node("pageNumDisplayText").checkBranching()
         get_parent().get_node("pageNumDisplayText").setBlockNum()
@@ -216,6 +233,7 @@ func _on_ColorRect_mouse_entered():
         slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
         slotDetailsObj[currentPageNumObj.pageNum].typeString = "LDA"
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 500
+        slotDetailsObj[currentPageNumObj.pageNum].addressBinding = false
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
@@ -225,7 +243,8 @@ func _on_ColorRect_mouse_entered():
         lda_button.inY = false
         lda_button.setOriginalPos()
         
-        get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
+        get_node("Address").set_visible(!slotDetailsObj[currentPageNumObj.pageNum].addressBinding)          # binding address slot
+        get_parent().get_node("hintTextDisplayer").set_text("You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text))
         
     if sto_button.isDragging && sto_button.inX && sto_button.inY  :
         
@@ -233,6 +252,7 @@ func _on_ColorRect_mouse_entered():
         slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
         slotDetailsObj[currentPageNumObj.pageNum].typeString = "STO"
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 300
+        slotDetailsObj[currentPageNumObj.pageNum].addressBinding = false
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
@@ -242,6 +262,7 @@ func _on_ColorRect_mouse_entered():
         sto_button.inY = false
         sto_button.setOriginalPos()
         
+        get_node("Address").set_visible(!slotDetailsObj[currentPageNumObj.pageNum].addressBinding)          # binding address slot
         get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
         
     if hlt_button.isDragging && hlt_button.inX && hlt_button.inY  :
@@ -250,6 +271,7 @@ func _on_ColorRect_mouse_entered():
         slotDetailsObj[currentPageNumObj.pageNum].typeString = "HLT"
         slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (1,1,1,1)
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 0
+        slotDetailsObj[currentPageNumObj.pageNum].addressBinding = true
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
@@ -259,6 +281,7 @@ func _on_ColorRect_mouse_entered():
         hlt_button.inY = false
         hlt_button.setOriginalPos()
         
+        get_node("Address").set_visible(!slotDetailsObj[currentPageNumObj.pageNum].addressBinding)          # binding address slot
         get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
     
 
@@ -278,6 +301,8 @@ func _on_page_changed():
     typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
     typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
     get_node("Address").set_text(slotDetailsObj[currentPageNumObj.pageNum].address)
+    get_node("Address").set_visible(!slotDetailsObj[currentPageNumObj.pageNum].addressBinding)          # address binding update
+    
     get_parent().get_node("pageNumDisplayText").checkBranching()
     get_parent().get_node("pageNumDisplayText").setBlockNum()                   # set block Number 
     
@@ -289,6 +314,7 @@ class SlotDetails:
     var opCode
     var color : Color
     var textColor : Color
+    var addressBinding : bool
     
 
 

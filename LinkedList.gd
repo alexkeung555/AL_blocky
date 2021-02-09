@@ -64,4 +64,3 @@ class node:
     func _init(number,x):
         var data = x;
         var index = number;
-        
