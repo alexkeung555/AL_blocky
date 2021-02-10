@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://pageNumController.gd" type="Script" id=1]
 [ext_resource path="res://log.gd" type="Script" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://buttonIcon/trashCan.png" type="Texture" id=18]
 [ext_resource path="res://buttonIcon/back-button.png" type="Texture" id=19]
 [ext_resource path="res://buttonIcon/run.png" type="Texture" id=20]
+[ext_resource path="res://blockIcon/DAT.png" type="Texture" id=21]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 17 )
@@ -58,7 +59,7 @@ __meta__ = {
 [node name="Address" type="TextEdit" parent="slot0"]
 margin_left = 110.0
 margin_top = -0.397
-margin_right = 140.0
+margin_right = 150.0
 margin_bottom = 24.603
 text = "00"
 __meta__ = {
@@ -113,7 +114,7 @@ __meta__ = {
 [node name="Address" type="TextEdit" parent="slot1"]
 margin_left = 110.0
 margin_top = -0.397
-margin_right = 140.0
+margin_right = 150.0
 margin_bottom = 24.603
 text = "00"
 __meta__ = {
@@ -168,7 +169,7 @@ __meta__ = {
 [node name="Address" type="TextEdit" parent="slot2"]
 margin_left = 110.0
 margin_top = -0.397
-margin_right = 140.0
+margin_right = 150.0
 margin_bottom = 24.603
 text = "00"
 __meta__ = {
@@ -223,7 +224,7 @@ __meta__ = {
 [node name="Address" type="TextEdit" parent="slot3"]
 margin_left = 110.0
 margin_top = -0.397
-margin_right = 140.0
+margin_right = 150.0
 margin_bottom = 24.603
 text = "00"
 __meta__ = {
@@ -278,7 +279,7 @@ __meta__ = {
 [node name="Address" type="TextEdit" parent="slot4"]
 margin_left = 110.0
 margin_top = -0.397
-margin_right = 140.0
+margin_right = 150.0
 margin_bottom = 24.603
 text = "00"
 __meta__ = {
@@ -333,7 +334,7 @@ __meta__ = {
 [node name="Address" type="TextEdit" parent="slot5"]
 margin_left = 110.0
 margin_top = -0.397
-margin_right = 140.0
+margin_right = 150.0
 margin_bottom = 24.603
 text = "00"
 __meta__ = {
@@ -388,7 +389,7 @@ __meta__ = {
 [node name="Address" type="TextEdit" parent="slot6"]
 margin_left = 110.0
 margin_top = -0.397
-margin_right = 140.0
+margin_right = 150.0
 margin_bottom = 24.603
 text = "00"
 __meta__ = {
@@ -443,7 +444,7 @@ __meta__ = {
 [node name="Address" type="TextEdit" parent="slot7"]
 margin_left = 110.0
 margin_top = -0.397
-margin_right = 140.0
+margin_right = 150.0
 margin_bottom = 24.603
 text = "00"
 __meta__ = {
@@ -498,7 +499,7 @@ __meta__ = {
 [node name="Address" type="TextEdit" parent="slot8"]
 margin_left = 110.0
 margin_top = -0.397
-margin_right = 140.0
+margin_right = 150.0
 margin_bottom = 24.603
 text = "00"
 __meta__ = {
@@ -553,7 +554,7 @@ __meta__ = {
 [node name="Address" type="TextEdit" parent="slot9"]
 margin_left = 110.0
 margin_top = -0.397
-margin_right = 140.0
+margin_right = 150.0
 margin_bottom = 24.603
 text = "00"
 __meta__ = {
@@ -595,10 +596,10 @@ __meta__ = {
 }
 
 [node name="hintTextDisplayer" type="RichTextLabel" parent="."]
-margin_left = 456.673
-margin_top = 20.8909
-margin_right = 754.673
-margin_bottom = 56.8909
+margin_left = 318.082
+margin_top = 27.1905
+margin_right = 616.082
+margin_bottom = 63.1905
 text = "Drag blocks to start!"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -624,7 +625,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="br_type_string2" type="RichTextLabel" parent="."]
+[node name="mem_type_string" type="RichTextLabel" parent="."]
 margin_left = 418.044
 margin_top = 300.105
 margin_right = 550.044
@@ -634,12 +635,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="br_type_string3" type="RichTextLabel" parent="."]
+[node name="halt_type_string" type="RichTextLabel" parent="."]
 margin_left = 591.641
 margin_top = 135.63
 margin_right = 689.641
 margin_bottom = 157.63
 text = "Halt Operation"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dat_type_string" type="RichTextLabel" parent="."]
+margin_left = 585.05
+margin_top = 299.243
+margin_right = 701.05
+margin_bottom = 325.243
+text = "Data Declaration"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -702,6 +713,12 @@ script = ExtResource( 2 )
 position = Vector2( 578.939, 160.753 )
 scale = Vector2( 0.12, 0.12 )
 normal = ExtResource( 13 )
+script = ExtResource( 2 )
+
+[node name="DAT" type="TouchScreenButton" parent="."]
+position = Vector2( 579.939, 327.557 )
+scale = Vector2( 0.12, 0.12 )
+normal = ExtResource( 21 )
 script = ExtResource( 2 )
 
 [node name="Node" type="Node" parent="."]
@@ -804,7 +821,7 @@ __meta__ = {
 [connection signal="text_changed" from="slot0/Address" to="slot0" method="_on_Address_changed"]
 [connection signal="pressed" from="slot0/discardButton" to="slot0" method="discardSingleSlotProperties"]
 [connection signal="mouse_entered" from="slot1" to="slot1" method="_on_ColorRect_mouse_entered"]
-[connection signal="text_changed" from="slot1/Address" to="slot1" method="_on_Address_text_changed"]
+[connection signal="text_changed" from="slot1/Address" to="slot1" method="_on_Address_changed"]
 [connection signal="pressed" from="slot1/discardButton" to="slot1" method="discardSingleSlotProperties"]
 [connection signal="mouse_entered" from="slot2" to="slot2" method="_on_ColorRect_mouse_entered"]
 [connection signal="text_changed" from="slot2/Address" to="slot2" method="_on_Address_changed"]
@@ -830,16 +847,17 @@ __meta__ = {
 [connection signal="mouse_entered" from="slot9" to="slot9" method="_on_ColorRect_mouse_entered"]
 [connection signal="text_changed" from="slot9/Address" to="slot9" method="_on_Address_changed"]
 [connection signal="pressed" from="slot9/discardButton" to="slot9" method="discardSingleSlotProperties"]
-[connection signal="pressed" from="resetAllButton" to="slot4" method="resetProperties"]
-[connection signal="pressed" from="resetAllButton" to="slot9" method="resetProperties"]
-[connection signal="pressed" from="resetAllButton" to="slot6" method="resetProperties"]
-[connection signal="pressed" from="resetAllButton" to="slot7" method="resetProperties"]
-[connection signal="pressed" from="resetAllButton" to="slot3" method="resetProperties"]
-[connection signal="pressed" from="resetAllButton" to="slot8" method="resetProperties"]
 [connection signal="pressed" from="resetAllButton" to="slot2" method="resetProperties"]
-[connection signal="pressed" from="resetAllButton" to="slot1" method="resetProperties"]
 [connection signal="pressed" from="resetAllButton" to="slot5" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot7" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot8" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot9" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot4" method="resetProperties"]
 [connection signal="pressed" from="resetAllButton" to="slot0" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot3" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot1" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot6" method="resetProperties"]
 [connection signal="pressed" from="previousPage" to="pageNumDisplayText" method="previousPagePressed"]
 [connection signal="pressed" from="nextPage" to="pageNumDisplayText" method="nextPagePressed"]
 [connection signal="pressed" from="Button" to="." method="backToMenu"]
+[connection signal="pressed" from="Button2" to="." method="compile_LMC"]

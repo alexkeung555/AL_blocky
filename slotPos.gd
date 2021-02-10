@@ -199,7 +199,7 @@ func _process(delta):
 func _input(event):
    # Mouse in viewport coordinates.
     if event is InputEventMouseButton :
-        print("Mouse Click/Unclick at: ", event.position)
+        #print("Mouse Click/Unclick at: ", event.position)
         
         # check mouse within the box
         if event.position.x > get_parent().rect_position.x && event.position.x < get_parent().rect_position.x + sizeX : 
@@ -216,7 +216,7 @@ func _input(event):
         
   
         if isDragging :
-            print("stop Dragging")
+            #print("stop Dragging")
             
             isDragging = false
             get_parent().get_parent().get_node("DraggingIcon").visible = false
@@ -251,7 +251,7 @@ func _input(event):
             
             
         else:
-            print("start Dragging")
+            #print("start Dragging")
             isDragging = true
             previousMousePos = event.position.y
             

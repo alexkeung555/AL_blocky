@@ -47,12 +47,12 @@ class List:
         if(next==null):
             return null;
         var currNode = next;
-        var stra = "1. " + str(currNode.data);
+        var stra = "1. " + "Index: " + str(currNode.index) + " opCode: " + str(currNode.data);
         var count = 1;
         while (currNode.nextNode != null):
             currNode = currNode.nextNode
             count+=1;
-            stra =  stra + '\n' + str(count) + ". " + str(currNode.data);            
+            stra =  stra + '\n' + str(count) + ". " + "Index: " + str(currNode.index) + " opCode: " + str(currNode.data);            
         return stra;
         
 class node:

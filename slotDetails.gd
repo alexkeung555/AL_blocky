@@ -5,6 +5,16 @@ extends ColorRect
 # var a = 2
 # var b = "text"
 
+class SlotDetails:
+    var slotNum
+    var address
+    var typeString
+    var opCode
+    var color : Color
+    var textColor : Color
+    var addressBinding : bool
+
+
 const LinkedList = preload("LinkedList.gd")
 
 var slotNum
@@ -86,6 +96,7 @@ func _on_ColorRect_mouse_entered():
     var lda_button = get_parent().get_node("LDA")
     var sto_button = get_parent().get_node("STO")
     var hlt_button = get_parent().get_node("HLT")
+    var dat_button = get_parent().get_node("DAT")
     
     if in_button.isDragging && in_button.inX && in_button.inY :
         
@@ -283,6 +294,25 @@ func _on_ColorRect_mouse_entered():
         
         get_node("Address").set_visible(!slotDetailsObj[currentPageNumObj.pageNum].addressBinding)          # binding address slot
         get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
+        
+    if dat_button.isDragging && dat_button.inX && dat_button.inY  :
+        
+        slotDetailsObj[currentPageNumObj.pageNum].color = Color(1,1,1,1)
+        slotDetailsObj[currentPageNumObj.pageNum].typeString = "DAT"
+        slotDetailsObj[currentPageNumObj.pageNum].textColor = Color (0,0,0,1)
+        slotDetailsObj[currentPageNumObj.pageNum].opCode = 0
+        slotDetailsObj[currentPageNumObj.pageNum].addressBinding = false
+        
+        color = slotDetailsObj[currentPageNumObj.pageNum].color
+        typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
+        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
+        
+        dat_button.inX = false
+        dat_button.inY = false
+        dat_button.setOriginalPos()
+        
+        get_node("Address").set_visible(!slotDetailsObj[currentPageNumObj.pageNum].addressBinding)          # binding address slot
+        get_parent().get_node("hintTextDisplayer").text = "You put a " + slotDetailsObj[currentPageNumObj.pageNum].typeString + " block in slot " + String(get_node("blockNum").text)
     
 
 
@@ -307,15 +337,7 @@ func _on_page_changed():
     get_parent().get_node("pageNumDisplayText").setBlockNum()                   # set block Number 
     
 
-class SlotDetails:
-    var slotNum
-    var address
-    var typeString
-    var opCode
-    var color : Color
-    var textColor : Color
-    var addressBinding : bool
-    
+
 
 
 
