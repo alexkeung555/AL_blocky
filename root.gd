@@ -56,7 +56,8 @@ func compile_LMC():
                 
                 blockLinkedList.insertNode( slot, opCode + address)                  # add to linkedList
     
-    print(blockLinkedList.printall())
+    get_node("/root/generatedLMC").set_LMC_linkedList(blockLinkedList)        # upload the global linkList
+    #print(blockLinkedList.printall())
 
 func changeChildIndex(node, index):
     move_child(node, index)

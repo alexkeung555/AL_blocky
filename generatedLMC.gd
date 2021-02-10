@@ -1,6 +1,5 @@
 extends Node
 
-
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -12,12 +11,19 @@ var blockLinkedList = LinkedList.List.new()
 func _ready():
     print("Loaded: generatedLMC")
     
+    
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #    pass
 
-func set_LMC_linkedList( lmc : LinkedList):
+func set_LMC_linkedList(lmc):
+    
+    blockLinkedList = LinkedList.List.new()
+    blockLinkedList._init()
+    
     blockLinkedList = lmc
+    
     print("LMC linkedList replaced")
+    print(blockLinkedList.printall())
 
