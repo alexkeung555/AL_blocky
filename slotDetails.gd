@@ -317,9 +317,17 @@ func _on_ColorRect_mouse_entered():
 
 
 func _on_Address_changed():
+    var intVaildate : bool = get_node("Address").text.is_valid_integer() 
     
-    address = get_node("Address").text         # set the address value after mouse entered
-    slotDetailsObj[currentPageNumObj.pageNum].address = get_node("Address").text
+    if intVaildate:                                                                                              # check is int or not
+        address = get_node("Address").text.to_int()         # set the address value after mouse entered
+        slotDetailsObj[currentPageNumObj.pageNum].address = get_node("Address").text.to_int()
+        get_parent().get_node("hintTextDisplayer").text = "Set address " + str(address) + " in slot " + String(get_node("blockNum").text)
+    else:
+        address = "00"
+        slotDetailsObj[currentPageNumObj.pageNum].address = "00"
+        get_parent().get_node("hintTextDisplayer").text = "Invaild address in slot " + String(get_node("blockNum").text)
+        
     get_parent().get_node("pageNumDisplayText").checkBranching()
     get_parent().get_node("pageNumDisplayText").setBlockNum()
 
