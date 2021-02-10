@@ -17,6 +17,9 @@ func _ready():
 #func _process(delta):
 #    pass
 
+func get_LMC_linkedList():
+    return blockLinkedList
+
 func set_LMC_linkedList(lmc):
     
     blockLinkedList = LinkedList.List.new()

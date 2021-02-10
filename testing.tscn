@@ -57,6 +57,7 @@ __meta__ = {
 }
 
 [node name="Address" type="TextEdit" parent="slot0"]
+visible = false
 margin_left = 110.0
 margin_top = -0.397
 margin_right = 150.0
@@ -112,6 +113,7 @@ __meta__ = {
 }
 
 [node name="Address" type="TextEdit" parent="slot1"]
+visible = false
 margin_left = 110.0
 margin_top = -0.397
 margin_right = 150.0
@@ -167,6 +169,7 @@ __meta__ = {
 }
 
 [node name="Address" type="TextEdit" parent="slot2"]
+visible = false
 margin_left = 110.0
 margin_top = -0.397
 margin_right = 150.0
@@ -222,6 +225,7 @@ __meta__ = {
 }
 
 [node name="Address" type="TextEdit" parent="slot3"]
+visible = false
 margin_left = 110.0
 margin_top = -0.397
 margin_right = 150.0
@@ -277,6 +281,7 @@ __meta__ = {
 }
 
 [node name="Address" type="TextEdit" parent="slot4"]
+visible = false
 margin_left = 110.0
 margin_top = -0.397
 margin_right = 150.0
@@ -332,6 +337,7 @@ __meta__ = {
 }
 
 [node name="Address" type="TextEdit" parent="slot5"]
+visible = false
 margin_left = 110.0
 margin_top = -0.397
 margin_right = 150.0
@@ -387,6 +393,7 @@ __meta__ = {
 }
 
 [node name="Address" type="TextEdit" parent="slot6"]
+visible = false
 margin_left = 110.0
 margin_top = -0.397
 margin_right = 150.0
@@ -442,6 +449,7 @@ __meta__ = {
 }
 
 [node name="Address" type="TextEdit" parent="slot7"]
+visible = false
 margin_left = 110.0
 margin_top = -0.397
 margin_right = 150.0
@@ -497,6 +505,7 @@ __meta__ = {
 }
 
 [node name="Address" type="TextEdit" parent="slot8"]
+visible = false
 margin_left = 110.0
 margin_top = -0.397
 margin_right = 150.0
@@ -552,6 +561,7 @@ __meta__ = {
 }
 
 [node name="Address" type="TextEdit" parent="slot9"]
+visible = false
 margin_left = 110.0
 margin_top = -0.397
 margin_right = 150.0
@@ -596,10 +606,10 @@ __meta__ = {
 }
 
 [node name="hintTextDisplayer" type="RichTextLabel" parent="."]
-margin_left = 318.082
-margin_top = 27.1905
-margin_right = 616.082
-margin_bottom = 63.1905
+margin_left = 320.441
+margin_top = 29.5502
+margin_right = 618.441
+margin_bottom = 65.5502
 text = "Drag blocks to start!"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -794,19 +804,19 @@ visible = false
 position = Vector2( 523.658, 403.045 )
 scale = Vector2( 0.1, 0.1 )
 
-[node name="Button" type="Button" parent="."]
+[node name="backButton" type="Button" parent="."]
 margin_left = 26.1811
 margin_top = 20.6008
 margin_right = 550.181
 margin_bottom = 538.601
-rect_scale = Vector2( 0.08, 0.08 )
+rect_scale = Vector2( 0.06, 0.06 )
 icon = ExtResource( 19 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button2" type="Button" parent="."]
+[node name="RunButton" type="Button" parent="."]
 margin_left = 777.211
 margin_top = 12.5389
 margin_right = 1310.21
@@ -814,6 +824,16 @@ margin_bottom = 665.539
 rect_scale = Vector2( 0.05, 0.05 )
 icon = ExtResource( 20 )
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slotText" type="RichTextLabel" parent="."]
+margin_left = 871.438
+margin_top = 71.9203
+margin_right = 900.438
+margin_bottom = 87.9203
+text = "Slot"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -859,5 +879,5 @@ __meta__ = {
 [connection signal="pressed" from="resetAllButton" to="slot6" method="resetProperties"]
 [connection signal="pressed" from="previousPage" to="pageNumDisplayText" method="previousPagePressed"]
 [connection signal="pressed" from="nextPage" to="pageNumDisplayText" method="nextPagePressed"]
-[connection signal="pressed" from="Button" to="." method="backToMenu"]
-[connection signal="pressed" from="Button2" to="." method="compile_LMC"]
+[connection signal="pressed" from="backButton" to="." method="backToMenu"]
+[connection signal="pressed" from="RunButton" to="." method="compile_LMC"]

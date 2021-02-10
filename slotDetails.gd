@@ -40,9 +40,10 @@ func _ready():
         slotDetailsObj[i].opCode = 0
         slotDetailsObj[i].color = Color(1,1,1,1)
         slotDetailsObj[i].textColor =  Color(0,0,0,1)
-        slotDetailsObj[i].addressBinding = false
+        slotDetailsObj[i].addressBinding = true
     
     originalSlotDetailsObj = slotDetailsObj                                     #copy original details
+    
     
     slotNum = get_position_in_parent() - 1
     typeString = get_node("typeString")
@@ -66,6 +67,7 @@ func discardSingleSlotProperties():
         slotDetailsObj[currentPageNumObj.pageNum].opCode = 0
         slotDetailsObj[currentPageNumObj.pageNum].color = Color(1,1,1,1)
         slotDetailsObj[currentPageNumObj.pageNum].textColor =  Color(0,0,0,1)
+        slotDetailsObj[currentPageNumObj.pageNum].addressBinding = true
         _on_page_changed()
         get_parent().get_node("hintTextDisplayer").text = "Block discarded!"
 
@@ -79,6 +81,7 @@ func resetProperties():
         slotDetailsObj[i].opCode = 0
         slotDetailsObj[i].color = Color(1,1,1,1)
         slotDetailsObj[i].textColor =  Color(0,0,0,1)
+        slotDetailsObj[i].addressBinding = true
         
     _on_page_changed()
     get_parent().get_node("hintTextDisplayer").text = "All slots reset!"
@@ -321,7 +324,7 @@ func _on_Address_changed():
     
     if intVaildate:                                                                                              # check is int or not
         address = get_node("Address").text.to_int()         # set the address value after mouse entered
-        slotDetailsObj[currentPageNumObj.pageNum].address = get_node("Address").text.to_int()
+        slotDetailsObj[currentPageNumObj.pageNum].address = get_node("Address").text
         get_parent().get_node("hintTextDisplayer").text = "Set address " + str(address) + " in slot " + String(get_node("blockNum").text)
     else:
         address = "00"
@@ -338,7 +341,7 @@ func _on_page_changed():
     color = slotDetailsObj[currentPageNumObj.pageNum].color
     typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
     typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
-    get_node("Address").set_text(slotDetailsObj[currentPageNumObj.pageNum].address)
+    get_node("Address").set_text(String(slotDetailsObj[currentPageNumObj.pageNum].address))
     get_node("Address").set_visible(!slotDetailsObj[currentPageNumObj.pageNum].addressBinding)          # address binding update
     
     get_parent().get_node("pageNumDisplayText").checkBranching()

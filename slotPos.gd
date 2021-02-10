@@ -174,6 +174,7 @@ func _process(delta):
             
             swapped[targetSlotNum] = true
             print("swapped")
+            get_node("/root/Node2D/hintTextDisplayer").text = "Blocks swapped!"
             
             get_parent().get_parent().updateSlots()
             
