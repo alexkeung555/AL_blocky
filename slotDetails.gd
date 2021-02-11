@@ -58,7 +58,6 @@ func _process(delta):
     
 
 func discardSingleSlotProperties():
-        print("pressed " + String(slotNum))
         
         slotDetailsObj[currentPageNumObj.pageNum] = SlotDetails.new()
         slotDetailsObj[currentPageNumObj.pageNum].slotNum = get_position_in_parent() - 1

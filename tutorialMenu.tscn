@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://buttonIcon/back-button.png" type="Texture" id=1]
+[ext_resource path="res://buttonIcon/tut2.png" type="Texture" id=2]
+[ext_resource path="res://buttonIcon/tut.png" type="Texture" id=3]
+[ext_resource path="res://tutorialMenu.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://font/Gecade.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+font_data = SubResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.12134
+margin_top = -2.12132
+margin_right = 2.12134
+margin_bottom = -2.12134
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="backButton" type="Button" parent="."]
+show_behind_parent = true
+margin_left = 26.0
+margin_top = 20.0
+margin_right = 550.0
+margin_bottom = 538.0
+rect_scale = Vector2( 0.06, 0.06 )
+icon = ExtResource( 1 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tut1" type="Button" parent="."]
+margin_left = 239.694
+margin_top = 115.0
+margin_right = 704.694
+margin_bottom = 757.0
+rect_scale = Vector2( 0.5, 0.5 )
+icon = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tut2" type="Button" parent="."]
+margin_left = 551.606
+margin_top = 115.0
+margin_right = 1016.61
+margin_bottom = 756.0
+rect_scale = Vector2( 0.5, 0.5 )
+icon = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = -0.000775039
+anchor_right = -0.000775039
+margin_right = 1021.0
+margin_bottom = 92.0
+custom_fonts/font = SubResource( 2 )
+text = "Tutorial Mode"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="backButton" to="." method="_on_backButton_pressed"]
+[connection signal="pressed" from="tut1" to="." method="_on_tut1_pressed"]

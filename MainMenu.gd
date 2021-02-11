@@ -25,4 +25,4 @@ func task_mode_button_pressed():
 
 func tutorial_mode_button_pressed():
     print("Change scene:  tutorial")
-    
+    get_tree().change_scene("res://tutorialMenu.tscn")
