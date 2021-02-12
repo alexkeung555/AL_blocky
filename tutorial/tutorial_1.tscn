@@ -16,304 +16,8 @@
 [ext_resource path="res://blockIcon/BRP.png" type="Texture" id=14]
 
 [sub_resource type="DynamicFont" id=1]
-size = 25
+size = 31
 font_data = ExtResource( 3 )
-
-[sub_resource type="Animation" id=2]
-resource_name = "tut1_anime_ADD"
-tracks/0/type = "value"
-tracks/0/path = NodePath("ADD:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 220.794, 405 ), Vector2( 190, 290 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("ADD_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "tut1_anime_BR"
-tracks/0/type = "value"
-tracks/0/path = NodePath("BR:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 540.794, 405 ), Vector2( 190, 290 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("BR_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "tut1_anime_BRP"
-tracks/0/type = "value"
-tracks/0/path = NodePath("BRP:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 540.794, 545 ), Vector2( 190, 290 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("BRP_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=5]
-resource_name = "tut1_anime_BRZ"
-tracks/0/type = "value"
-tracks/0/path = NodePath("BRZ:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 540.794, 475 ), Vector2( 190, 290 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("BRZ_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=6]
-resource_name = "tut1_anime_DAT"
-tracks/0/type = "value"
-tracks/0/path = NodePath("DAT:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 860.794, 405 ), Vector2( 190, 290 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("DAT_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=7]
-resource_name = "tut1_anime_HLT"
-tracks/0/type = "value"
-tracks/0/path = NodePath("HLT:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 700.794, 405 ), Vector2( 190, 290 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("HLT_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=8]
-tracks/0/type = "value"
-tracks/0/path = NodePath("IN:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 60, 405 ), Vector2( 190, 290 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("IN_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=9]
-resource_name = "tut1_anime_LDA"
-tracks/0/type = "value"
-tracks/0/path = NodePath("LDA:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 380.794, 405 ), Vector2( 190, 290 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("LDA_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=10]
-resource_name = "tut1_anime_OUT"
-tracks/0/type = "value"
-tracks/0/path = NodePath("OUT:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 60.7937, 475 ), Vector2( 190, 290 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("OUT_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=11]
-resource_name = "tut1_anime_STO"
-tracks/0/type = "value"
-tracks/0/path = NodePath("STO:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 380.794, 475 ), Vector2( 190, 290 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("STO_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=12]
-resource_name = "tut1_anime_SUB"
-tracks/0/type = "value"
-tracks/0/path = NodePath("SUB:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 220.794, 475 ), Vector2( 190, 290 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("SUB_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
 
 [sub_resource type="Animation" id=13]
 resource_name = "tut1_anime_ADD"
@@ -327,7 +31,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 220.794, 405 ), Vector2( 190, 290 ) ]
+"values": [ Vector2( 431, 775 ), Vector2( 510, 460 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("ADD_infoText:visible")
@@ -354,7 +58,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 540.794, 405 ), Vector2( 190, 290 ) ]
+"values": [ Vector2( 992, 775 ), Vector2( 510, 460 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("BR_infoText:visible")
@@ -381,7 +85,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 540.794, 545 ), Vector2( 190, 290 ) ]
+"values": [ Vector2( 992, 972 ), Vector2( 510, 460 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("BRP_infoText:visible")
@@ -408,7 +112,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 540.794, 475 ), Vector2( 190, 290 ) ]
+"values": [ Vector2( 992, 874 ), Vector2( 510, 460 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("BRZ_infoText:visible")
@@ -435,7 +139,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 860.794, 405 ), Vector2( 190, 290 ) ]
+"values": [ Vector2( 1551, 775 ), Vector2( 510, 460 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("DAT_infoText:visible")
@@ -462,7 +166,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 700.794, 405 ), Vector2( 190, 290 ) ]
+"values": [ Vector2( 1280, 775 ), Vector2( 510, 460 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("HLT_infoText:visible")
@@ -488,7 +192,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 60, 405 ), Vector2( 190, 290 ) ]
+"values": [ Vector2( 150, 775 ), Vector2( 510, 460 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("IN_infoText:visible")
@@ -515,7 +219,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 380.794, 405 ), Vector2( 190, 290 ) ]
+"values": [ Vector2( 717, 775 ), Vector2( 510, 460 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("LDA_infoText:visible")
@@ -542,7 +246,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 60.7937, 475 ), Vector2( 190, 290 ) ]
+"values": [ Vector2( 150, 895 ), Vector2( 510, 460 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("OUT_infoText:visible")
@@ -569,7 +273,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 380.794, 475 ), Vector2( 190, 290 ) ]
+"values": [ Vector2( 717, 895 ), Vector2( 510, 460 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("STO_infoText:visible")
@@ -596,7 +300,303 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 220.794, 475 ), Vector2( 190, 290 ) ]
+"values": [ Vector2( 431, 895 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SUB_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "tut1_anime_ADD"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ADD:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 431, 775 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ADD_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "tut1_anime_BR"
+tracks/0/type = "value"
+tracks/0/path = NodePath("BR:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 992, 775 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BR_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "tut1_anime_BRP"
+tracks/0/type = "value"
+tracks/0/path = NodePath("BRP:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 992, 972 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BRP_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "tut1_anime_BRZ"
+tracks/0/type = "value"
+tracks/0/path = NodePath("BRZ:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 992, 874 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BRZ_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "tut1_anime_DAT"
+tracks/0/type = "value"
+tracks/0/path = NodePath("DAT:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1551, 775 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("DAT_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=30]
+resource_name = "tut1_anime_HLT"
+tracks/0/type = "value"
+tracks/0/path = NodePath("HLT:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1280, 775 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HLT_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=31]
+tracks/0/type = "value"
+tracks/0/path = NodePath("IN:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 150, 775 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IN_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=32]
+resource_name = "tut1_anime_LDA"
+tracks/0/type = "value"
+tracks/0/path = NodePath("LDA:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 717, 775 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LDA_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=33]
+resource_name = "tut1_anime_OUT"
+tracks/0/type = "value"
+tracks/0/path = NodePath("OUT:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 150, 895 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("OUT_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=34]
+resource_name = "tut1_anime_STO"
+tracks/0/type = "value"
+tracks/0/path = NodePath("STO:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 717, 895 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("STO_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=35]
+resource_name = "tut1_anime_SUB"
+tracks/0/type = "value"
+tracks/0/path = NodePath("SUB:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 431, 895 ), Vector2( 510, 460 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("SUB_infoText:visible")
@@ -612,16 +612,16 @@ tracks/1/keys = {
 }
 
 [sub_resource type="DynamicFont" id=24]
-size = 20
+size = 30
 font_data = ExtResource( 3 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -0.793701
-margin_top = -0.793704
+margin_top = -4.22785
 margin_right = -0.793701
-margin_bottom = -0.793701
+margin_bottom = -4.22791
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -629,21 +629,21 @@ __meta__ = {
 
 [node name="ColorRect" type="ColorRect" parent="."]
 show_behind_parent = true
-margin_left = -55.0
-margin_top = -14.0
-margin_right = 1067.0
-margin_bottom = 190.0
+margin_left = -78.0
+margin_top = -20.0
+margin_right = 1989.0
+margin_bottom = 232.0
 color = Color( 0.2, 0.2, 0.2, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="backButton" type="Button" parent="."]
-margin_left = 26.0
-margin_top = 20.0
-margin_right = 550.0
-margin_bottom = 538.0
-rect_scale = Vector2( 0.06, 0.06 )
+margin_left = 62.6664
+margin_top = 42.6274
+margin_right = 586.666
+margin_bottom = 560.627
+rect_scale = Vector2( 0.15, 0.15 )
 icon = ExtResource( 1 )
 flat = true
 __meta__ = {
@@ -651,10 +651,10 @@ __meta__ = {
 }
 
 [node name="description" type="RichTextLabel" parent="."]
-margin_left = 139.699
-margin_top = 23.1433
-margin_right = 903.699
-margin_bottom = 191.143
+margin_left = 279.282
+margin_top = 42.7183
+margin_right = 1464.28
+margin_bottom = 235.718
 custom_fonts/normal_font = SubResource( 1 )
 text = "This tutorial will introduce blocks in AL Blocky
 
@@ -666,11 +666,11 @@ __meta__ = {
 }
 
 [node name="IN" type="Button" parent="."]
-margin_left = 60.0
-margin_top = 405.0
-margin_right = 1082.01
-margin_bottom = 672.001
-rect_scale = Vector2( 0.12, 0.12 )
+margin_left = 150.0
+margin_top = 775.0
+margin_right = 1172.01
+margin_bottom = 1042.0
+rect_scale = Vector2( 0.2, 0.2 )
 icon = ExtResource( 6 )
 flat = true
 __meta__ = {
@@ -678,11 +678,11 @@ __meta__ = {
 }
 
 [node name="OUT" type="Button" parent="."]
-margin_left = 60.7937
-margin_top = 475.0
-margin_right = 1082.8
-margin_bottom = 742.001
-rect_scale = Vector2( 0.12, 0.12 )
+margin_left = 150.0
+margin_top = 895.0
+margin_right = 1172.01
+margin_bottom = 1162.0
+rect_scale = Vector2( 0.2, 0.2 )
 icon = ExtResource( 5 )
 flat = true
 __meta__ = {
@@ -690,11 +690,11 @@ __meta__ = {
 }
 
 [node name="ADD" type="Button" parent="."]
-margin_left = 220.794
-margin_top = 405.0
-margin_right = 1242.79
-margin_bottom = 672.0
-rect_scale = Vector2( 0.12, 0.12 )
+margin_left = 431.0
+margin_top = 775.0
+margin_right = 1453.0
+margin_bottom = 1042.0
+rect_scale = Vector2( 0.2, 0.2 )
 icon = ExtResource( 12 )
 flat = true
 __meta__ = {
@@ -702,11 +702,11 @@ __meta__ = {
 }
 
 [node name="SUB" type="Button" parent="."]
-margin_left = 220.794
-margin_top = 475.0
-margin_right = 1242.79
-margin_bottom = 742.0
-rect_scale = Vector2( 0.12, 0.12 )
+margin_left = 431.0
+margin_top = 895.0
+margin_right = 1453.0
+margin_bottom = 1162.0
+rect_scale = Vector2( 0.2, 0.2 )
 icon = ExtResource( 4 )
 flat = true
 __meta__ = {
@@ -714,11 +714,11 @@ __meta__ = {
 }
 
 [node name="LDA" type="Button" parent="."]
-margin_left = 380.794
-margin_top = 405.0
-margin_right = 1402.79
-margin_bottom = 672.0
-rect_scale = Vector2( 0.12, 0.12 )
+margin_left = 717.0
+margin_top = 775.0
+margin_right = 1739.0
+margin_bottom = 1042.0
+rect_scale = Vector2( 0.2, 0.2 )
 icon = ExtResource( 7 )
 flat = true
 __meta__ = {
@@ -726,11 +726,11 @@ __meta__ = {
 }
 
 [node name="STO" type="Button" parent="."]
-margin_left = 380.794
-margin_top = 475.0
-margin_right = 1402.79
-margin_bottom = 742.001
-rect_scale = Vector2( 0.12, 0.12 )
+margin_left = 717.0
+margin_top = 895.0
+margin_right = 1739.0
+margin_bottom = 1162.0
+rect_scale = Vector2( 0.2, 0.2 )
 icon = ExtResource( 11 )
 flat = true
 __meta__ = {
@@ -738,11 +738,11 @@ __meta__ = {
 }
 
 [node name="BR" type="Button" parent="."]
-margin_left = 540.794
-margin_top = 405.0
-margin_right = 1562.79
-margin_bottom = 672.0
-rect_scale = Vector2( 0.12, 0.12 )
+margin_left = 992.0
+margin_top = 775.0
+margin_right = 2014.0
+margin_bottom = 1042.0
+rect_scale = Vector2( 0.2, 0.2 )
 icon = ExtResource( 9 )
 flat = true
 __meta__ = {
@@ -750,11 +750,11 @@ __meta__ = {
 }
 
 [node name="BRZ" type="Button" parent="."]
-margin_left = 540.794
-margin_top = 475.0
-margin_right = 1562.79
-margin_bottom = 742.0
-rect_scale = Vector2( 0.12, 0.12 )
+margin_left = 992.0
+margin_top = 874.0
+margin_right = 2014.0
+margin_bottom = 1141.0
+rect_scale = Vector2( 0.2, 0.2 )
 icon = ExtResource( 13 )
 flat = true
 __meta__ = {
@@ -762,11 +762,11 @@ __meta__ = {
 }
 
 [node name="BRP" type="Button" parent="."]
-margin_left = 540.794
-margin_top = 545.0
-margin_right = 1562.79
-margin_bottom = 812.0
-rect_scale = Vector2( 0.12, 0.12 )
+margin_left = 992.0
+margin_top = 972.0
+margin_right = 2014.0
+margin_bottom = 1239.0
+rect_scale = Vector2( 0.2, 0.2 )
 icon = ExtResource( 14 )
 flat = true
 __meta__ = {
@@ -774,11 +774,11 @@ __meta__ = {
 }
 
 [node name="DAT" type="Button" parent="."]
-margin_left = 860.794
-margin_top = 405.0
-margin_right = 1882.79
-margin_bottom = 672.0
-rect_scale = Vector2( 0.12, 0.12 )
+margin_left = 1551.0
+margin_top = 775.0
+margin_right = 2573.0
+margin_bottom = 1042.0
+rect_scale = Vector2( 0.2, 0.2 )
 icon = ExtResource( 10 )
 flat = true
 __meta__ = {
@@ -786,29 +786,16 @@ __meta__ = {
 }
 
 [node name="HLT" type="Button" parent="."]
-margin_left = 700.794
-margin_top = 405.0
-margin_right = 1722.79
-margin_bottom = 672.0
-rect_scale = Vector2( 0.12, 0.12 )
+margin_left = 1280.0
+margin_top = 775.0
+margin_right = 2302.0
+margin_bottom = 1042.0
+rect_scale = Vector2( 0.2, 0.2 )
 icon = ExtResource( 8 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
-anims/tut1_anime_ADD = SubResource( 2 )
-anims/tut1_anime_BR = SubResource( 3 )
-anims/tut1_anime_BRP = SubResource( 4 )
-anims/tut1_anime_BRZ = SubResource( 5 )
-anims/tut1_anime_DAT = SubResource( 6 )
-anims/tut1_anime_HLT = SubResource( 7 )
-anims/tut1_anime_IN = SubResource( 8 )
-anims/tut1_anime_LDA = SubResource( 9 )
-anims/tut1_anime_OUT = SubResource( 10 )
-anims/tut1_anime_STO = SubResource( 11 )
-anims/tut1_anime_SUB = SubResource( 12 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/tut1_anime_ADD = SubResource( 13 )
@@ -823,12 +810,25 @@ anims/tut1_anime_OUT = SubResource( 21 )
 anims/tut1_anime_STO = SubResource( 22 )
 anims/tut1_anime_SUB = SubResource( 23 )
 
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+anims/tut1_anime_ADD = SubResource( 25 )
+anims/tut1_anime_BR = SubResource( 26 )
+anims/tut1_anime_BRP = SubResource( 27 )
+anims/tut1_anime_BRZ = SubResource( 28 )
+anims/tut1_anime_DAT = SubResource( 29 )
+anims/tut1_anime_HLT = SubResource( 30 )
+anims/tut1_anime_IN = SubResource( 31 )
+anims/tut1_anime_LDA = SubResource( 32 )
+anims/tut1_anime_OUT = SubResource( 33 )
+anims/tut1_anime_STO = SubResource( 34 )
+anims/tut1_anime_SUB = SubResource( 35 )
+
 [node name="IN_infoText" type="RichTextLabel" parent="."]
 visible = false
-margin_left = 357.0
-margin_top = 264.0
-margin_right = 837.0
-margin_bottom = 374.0
+margin_left = 765.0
+margin_top = 412.0
+margin_right = 1331.0
+margin_bottom = 606.0
 custom_fonts/normal_font = SubResource( 24 )
 text = "IN Instruction
 Machine Code: 901
@@ -842,10 +842,10 @@ __meta__ = {
 
 [node name="OUT_infoText" type="RichTextLabel" parent="."]
 visible = false
-margin_left = 357.0
-margin_top = 264.0
-margin_right = 932.0
-margin_bottom = 371.0
+margin_left = 766.486
+margin_top = 412.757
+margin_right = 1341.49
+margin_bottom = 621.757
 custom_fonts/normal_font = SubResource( 24 )
 text = "OUT Instruction
 Machine Code: 902
@@ -859,10 +859,10 @@ __meta__ = {
 
 [node name="ADD_infoText" type="RichTextLabel" parent="."]
 visible = false
-margin_left = 357.0
-margin_top = 264.0
-margin_right = 966.0
-margin_bottom = 391.0
+margin_left = 768.0
+margin_top = 426.0
+margin_right = 1788.0
+margin_bottom = 637.0
 custom_fonts/normal_font = SubResource( 24 )
 text = "ADD Instruction
 Machine Code: 1XX   (XX is the address)
@@ -876,10 +876,10 @@ __meta__ = {
 
 [node name="SUB_infoText" type="RichTextLabel" parent="."]
 visible = false
-margin_left = 357.0
-margin_top = 264.0
-margin_right = 966.0
-margin_bottom = 390.0
+margin_left = 768.0
+margin_top = 426.0
+margin_right = 1802.0
+margin_bottom = 629.0
 custom_fonts/normal_font = SubResource( 24 )
 text = "SUB Instruction
 Machine Code: 2XX   (XX is the address)
@@ -893,10 +893,10 @@ __meta__ = {
 
 [node name="LDA_infoText" type="RichTextLabel" parent="."]
 visible = false
-margin_left = 357.0
-margin_top = 264.0
-margin_right = 989.0
-margin_bottom = 371.0
+margin_left = 768.0
+margin_top = 426.0
+margin_right = 1816.0
+margin_bottom = 653.0
 custom_fonts/normal_font = SubResource( 24 )
 text = "LDA Instruction
 Machine Code: 5XX   (XX is the address)
@@ -910,10 +910,10 @@ __meta__ = {
 
 [node name="STO_infoText" type="RichTextLabel" parent="."]
 visible = false
-margin_left = 357.0
-margin_top = 264.0
-margin_right = 989.0
-margin_bottom = 371.0
+margin_left = 768.0
+margin_top = 426.0
+margin_right = 1701.0
+margin_bottom = 651.0
 custom_fonts/normal_font = SubResource( 24 )
 text = "STO Instruction
 Machine Code: 3XX   (XX is the address)
@@ -927,10 +927,10 @@ __meta__ = {
 
 [node name="BR_infoText" type="RichTextLabel" parent="."]
 visible = false
-margin_left = 357.0
-margin_top = 264.0
-margin_right = 968.0
-margin_bottom = 392.0
+margin_left = 768.0
+margin_top = 426.0
+margin_right = 1805.0
+margin_bottom = 638.0
 custom_fonts/normal_font = SubResource( 24 )
 text = "BR Instruction
 Machine Code: 6XX   (XX is the address)
@@ -944,10 +944,10 @@ __meta__ = {
 
 [node name="BRZ_infoText" type="RichTextLabel" parent="."]
 visible = false
-margin_left = 354.0
-margin_top = 266.0
-margin_right = 989.0
-margin_bottom = 402.0
+margin_left = 765.0
+margin_top = 428.0
+margin_right = 1775.0
+margin_bottom = 665.0
 custom_fonts/normal_font = SubResource( 24 )
 text = "BRZ Instruction
 Machine Code: 7XX    (XX is the address)
@@ -962,10 +962,10 @@ __meta__ = {
 
 [node name="BRP_infoText" type="RichTextLabel" parent="."]
 visible = false
-margin_left = 359.381
-margin_top = 253.238
-margin_right = 970.381
-margin_bottom = 402.238
+margin_left = 771.0
+margin_top = 415.0
+margin_right = 1789.0
+margin_bottom = 639.0
 custom_fonts/normal_font = SubResource( 24 )
 text = "BRP Instruction
 Machine Code: 8XX   (XX is the address)
@@ -980,10 +980,10 @@ __meta__ = {
 
 [node name="HLT_infoText" type="RichTextLabel" parent="."]
 visible = false
-margin_left = 359.381
-margin_top = 253.238
-margin_right = 970.381
-margin_bottom = 402.238
+margin_left = 771.0
+margin_top = 415.0
+margin_right = 1496.0
+margin_bottom = 646.0
 custom_fonts/normal_font = SubResource( 24 )
 text = "HLT Instruction
 Machine Code: 000
@@ -997,10 +997,10 @@ __meta__ = {
 
 [node name="DAT_infoText" type="RichTextLabel" parent="."]
 visible = false
-margin_left = 359.381
-margin_top = 253.238
-margin_right = 970.381
-margin_bottom = 402.238
+margin_left = 771.0
+margin_top = 415.0
+margin_right = 1591.0
+margin_bottom = 639.0
 custom_fonts/normal_font = SubResource( 24 )
 text = "DAT (Data Location)
 Machine Code: None

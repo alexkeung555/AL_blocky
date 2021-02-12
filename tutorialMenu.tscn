@@ -9,7 +9,7 @@
 font_path = "res://font/Gecade.ttf"
 
 [sub_resource type="DynamicFont" id=2]
-size = 25
+size = 44
 font_data = SubResource( 1 )
 
 [node name="Control" type="Control"]
@@ -26,11 +26,11 @@ __meta__ = {
 
 [node name="backButton" type="Button" parent="."]
 show_behind_parent = true
-margin_left = 26.0
-margin_top = 20.0
-margin_right = 550.0
-margin_bottom = 538.0
-rect_scale = Vector2( 0.06, 0.06 )
+margin_left = 71.3572
+margin_top = 47.7183
+margin_right = 595.357
+margin_bottom = 565.718
+rect_scale = Vector2( 0.15, 0.15 )
 icon = ExtResource( 1 )
 flat = true
 __meta__ = {
@@ -38,32 +38,34 @@ __meta__ = {
 }
 
 [node name="tut1" type="Button" parent="."]
-margin_left = 239.694
-margin_top = 115.0
-margin_right = 704.694
-margin_bottom = 757.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 531.995
+margin_top = 266.191
+margin_right = 996.995
+margin_bottom = 908.191
+rect_scale = Vector2( 0.75, 0.75 )
 icon = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="tut2" type="Button" parent="."]
-margin_left = 551.606
-margin_top = 115.0
-margin_right = 1016.61
-margin_bottom = 756.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 1064.39
+margin_top = 267.45
+margin_right = 1529.4
+margin_bottom = 908.45
+rect_scale = Vector2( 0.75, 0.75 )
 icon = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-anchor_left = -0.000775039
-anchor_right = -0.000775039
-margin_right = 1021.0
-margin_bottom = 92.0
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -507.98
+margin_top = 62.9961
+margin_right = 513.02
+margin_bottom = 154.996
 custom_fonts/font = SubResource( 2 )
 text = "Tutorial Mode"
 align = 1

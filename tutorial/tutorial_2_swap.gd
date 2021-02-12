@@ -5,8 +5,8 @@ extends Position2D
 # var a = 2
 # var b = "text"
 
-var sizeX = 100
-var sizeY = 25
+var sizeX = 200
+var sizeY = 50
 var inX = false
 var inY = false
 var isDragging = false
