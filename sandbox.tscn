@@ -73,7 +73,7 @@ __meta__ = {
 [node name="blockNum" type="Label" parent="slot0"]
 margin_left = -53.0805
 margin_top = 9.13223
-margin_right = -21.0805
+margin_right = -13.0805
 margin_bottom = 38.1322
 custom_fonts/font = ExtResource( 22 )
 text = "00"
@@ -131,7 +131,7 @@ __meta__ = {
 [node name="blockNum" type="Label" parent="slot1"]
 margin_left = -53.0805
 margin_top = 9.13223
-margin_right = -21.0805
+margin_right = -13.0805
 margin_bottom = 38.1322
 custom_fonts/font = ExtResource( 22 )
 text = "00"
@@ -189,7 +189,7 @@ __meta__ = {
 [node name="blockNum" type="Label" parent="slot2"]
 margin_left = -53.0805
 margin_top = 9.13223
-margin_right = -21.0805
+margin_right = -13.0805
 margin_bottom = 38.1322
 custom_fonts/font = ExtResource( 22 )
 text = "00"
@@ -247,7 +247,7 @@ __meta__ = {
 [node name="blockNum" type="Label" parent="slot3"]
 margin_left = -53.0805
 margin_top = 9.13223
-margin_right = -21.0805
+margin_right = -13.0805
 margin_bottom = 38.1322
 custom_fonts/font = ExtResource( 22 )
 text = "00"
@@ -305,7 +305,7 @@ __meta__ = {
 [node name="blockNum" type="Label" parent="slot4"]
 margin_left = -53.0805
 margin_top = 9.13223
-margin_right = -21.0805
+margin_right = -13.0805
 margin_bottom = 38.1322
 custom_fonts/font = ExtResource( 22 )
 text = "00"
@@ -363,7 +363,7 @@ __meta__ = {
 [node name="blockNum" type="Label" parent="slot5"]
 margin_left = -53.0805
 margin_top = 9.13223
-margin_right = -21.0805
+margin_right = -13.0805
 margin_bottom = 38.1322
 custom_fonts/font = ExtResource( 22 )
 text = "00"
@@ -421,7 +421,7 @@ __meta__ = {
 [node name="blockNum" type="Label" parent="slot6"]
 margin_left = -53.0805
 margin_top = 9.13223
-margin_right = -21.0805
+margin_right = -13.0805
 margin_bottom = 38.1322
 custom_fonts/font = ExtResource( 22 )
 text = "00"
@@ -479,7 +479,7 @@ __meta__ = {
 [node name="blockNum" type="Label" parent="slot7"]
 margin_left = -53.0805
 margin_top = 9.13223
-margin_right = -21.0805
+margin_right = -13.0805
 margin_bottom = 38.1322
 custom_fonts/font = ExtResource( 22 )
 text = "00"
@@ -537,7 +537,7 @@ __meta__ = {
 [node name="blockNum" type="Label" parent="slot8"]
 margin_left = -53.0805
 margin_top = 9.13223
-margin_right = -21.0805
+margin_right = -13.0805
 margin_bottom = 38.1322
 custom_fonts/font = ExtResource( 22 )
 text = "00"
@@ -595,7 +595,7 @@ __meta__ = {
 [node name="blockNum" type="Label" parent="slot9"]
 margin_left = -53.0805
 margin_top = 9.13223
-margin_right = -21.0805
+margin_right = -13.0805
 margin_bottom = 38.1322
 custom_fonts/font = ExtResource( 22 )
 text = "00"
@@ -861,9 +861,9 @@ __meta__ = {
 }
 
 [node name="slotText" type="RichTextLabel" parent="."]
-margin_left = 1584.75
+margin_left = 1596.76
 margin_top = 132.79
-margin_right = 1646.75
+margin_right = 1658.76
 margin_bottom = 164.79
 custom_fonts/normal_font = ExtResource( 22 )
 text = "Slot"
@@ -901,6 +901,15 @@ __meta__ = {
 [connection signal="text_changed" from="slot9/Address" to="slot9" method="_on_Address_changed"]
 [connection signal="pressed" from="slot9/discardButton" to="slot9" method="discardSingleSlotProperties"]
 [connection signal="pressed" from="resetAllButton" to="slot0" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot2" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot1" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot3" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot8" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot9" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot4" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot5" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot6" method="resetProperties"]
+[connection signal="pressed" from="resetAllButton" to="slot7" method="resetProperties"]
 [connection signal="pressed" from="previousPage" to="pageNumDisplayText" method="previousPagePressed"]
 [connection signal="pressed" from="nextPage" to="pageNumDisplayText" method="nextPagePressed"]
 [connection signal="pressed" from="backButton" to="." method="backToMenu"]

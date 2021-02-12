@@ -85,6 +85,7 @@ func _on_slot1_mouse_entered():
         $slot1.color = Color(1,1,0,1)
         $slot1.get_node("typeString").text = "ADD"
         
+        $ADD.set_visible(false)
         $ADD.setOriginalPos()
         $IN.setOriginalPos()
         

@@ -23,7 +23,7 @@ func setBlockNum():
     var pageNumberOffset = (pageNum-1) * 10
     
     for  i in range(10):
-        get_parent().get_node("slot" + String(i) + "/blockNum").set("custom_colors/default_color", Color(1,1,1,1))
+        get_parent().get_node("slot" + String(i) + "/blockNum").set("custom_colors/font_color", Color(1,1,1,1))
         
         
     for  i in range(10):
@@ -31,7 +31,7 @@ func setBlockNum():
         
         for x in slotNumShouldChangeColor:
             if x == i+pageNumberOffset:
-                get_parent().get_node("slot" + String(i) + "/blockNum").set("custom_colors/default_color", Color(1,0.597,0,1))
+                get_parent().get_node("slot" + String(i) + "/blockNum").set("custom_colors/font_color", Color(1,0.597,0,1))
             
     
     slotNumShouldChangeColor = []
