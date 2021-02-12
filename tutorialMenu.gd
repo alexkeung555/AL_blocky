@@ -26,3 +26,8 @@ func _on_backButton_pressed():
 func _on_tut1_pressed():
     print("Change scene: Tutorial 1" )
     get_tree().change_scene("res://tutorial/tutorial_1.tscn")
+
+
+func _on_tut2_pressed():
+    print("Change scene: Tutorial 2" )
+    get_tree().change_scene("res://tutorial/tutorial_2.tscn")

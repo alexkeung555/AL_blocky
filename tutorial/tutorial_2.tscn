@@ -1,0 +1,858 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://tutorial/tutorial_2.gd" type="Script" id=1]
+[ext_resource path="res://buttonIcon/back-button.png" type="Texture" id=2]
+[ext_resource path="res://buttonIcon/trashCan.png" type="Texture" id=3]
+[ext_resource path="res://blockIcon/INPUT.png" type="Texture" id=4]
+[ext_resource path="res://blockIcon/ADD.png" type="Texture" id=5]
+[ext_resource path="res://buttonIcon/ok-like-hand-sign.png" type="Texture" id=6]
+[ext_resource path="res://font/Gecade.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://tutorial/tutorial_2_draggingButton.gd" type="Script" id=8]
+[ext_resource path="res://tutorial/tutorial_2_swap.gd" type="Script" id=9]
+[ext_resource path="res://blockIcon/SUB.png" type="Texture" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 7 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "address_field_anime"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("slot0/address:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("slot1/address:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("slot2/address:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("slot3/address:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "slot_animation"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("slot0:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("slot1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("slot2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("slot3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.629883
+margin_right = 0.629883
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slotsBG" type="ColorRect" parent="."]
+visible = false
+margin_left = 658.55
+margin_top = 166.581
+margin_right = 920.55
+margin_bottom = 405.581
+color = Color( 0.2, 0.2, 0.2, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="backButton" type="Button" parent="."]
+margin_left = 26.0
+margin_top = 20.0
+margin_right = 38.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.06, 0.06 )
+icon = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slot0" type="ColorRect" parent="."]
+visible = false
+margin_left = 714.062
+margin_top = 200.404
+margin_right = 814.062
+margin_bottom = 225.404
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="slot0"]
+margin_left = -25.0
+margin_top = 5.0
+margin_right = -8.0
+margin_bottom = 22.0
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="address" type="TextEdit" parent="slot0"]
+visible = false
+margin_left = 120.0
+margin_top = -0.353546
+margin_right = 150.0
+margin_bottom = 24.6465
+text = "00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="discard" type="Button" parent="slot0"]
+margin_left = 165.0
+margin_right = 689.0
+margin_bottom = 518.0
+rect_scale = Vector2( 0.05, 0.05 )
+icon = ExtResource( 3 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="typeString" type="Label" parent="slot0"]
+margin_left = 0.71936
+margin_top = 5.96431
+margin_right = 99.7194
+margin_bottom = 22.9643
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slot1" type="ColorRect" parent="."]
+visible = false
+margin_left = 714.062
+margin_top = 249.293
+margin_right = 814.062
+margin_bottom = 274.293
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="slot1"]
+margin_left = -25.0
+margin_top = 5.0
+margin_right = -8.0
+margin_bottom = 22.0
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="address" type="TextEdit" parent="slot1"]
+visible = false
+margin_left = 120.0
+margin_top = -0.353546
+margin_right = 150.0
+margin_bottom = 24.6465
+text = "00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="discard" type="Button" parent="slot1"]
+margin_left = 165.0
+margin_right = 689.0
+margin_bottom = 518.0
+rect_scale = Vector2( 0.05, 0.05 )
+icon = ExtResource( 3 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="typeString" type="Label" parent="slot1"]
+margin_left = 0.71936
+margin_top = 5.96431
+margin_right = 99.7194
+margin_bottom = 22.9643
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slot2" type="ColorRect" parent="."]
+visible = false
+margin_left = 714.062
+margin_top = 299.293
+margin_right = 814.062
+margin_bottom = 324.293
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="slot2"]
+margin_left = -25.0
+margin_top = 5.0
+margin_right = -8.0
+margin_bottom = 22.0
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="address" type="TextEdit" parent="slot2"]
+visible = false
+margin_left = 120.0
+margin_top = -0.353546
+margin_right = 150.0
+margin_bottom = 24.6465
+text = "00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="discard" type="Button" parent="slot2"]
+margin_left = 165.0
+margin_right = 689.0
+margin_bottom = 518.0
+rect_scale = Vector2( 0.05, 0.05 )
+icon = ExtResource( 3 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="typeString" type="Label" parent="slot2"]
+margin_left = 0.71936
+margin_top = 5.96431
+margin_right = 99.7194
+margin_bottom = 22.9643
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="slot2"]
+script = ExtResource( 9 )
+
+[node name="slot3" type="ColorRect" parent="."]
+visible = false
+margin_left = 714.062
+margin_top = 349.293
+margin_right = 814.062
+margin_bottom = 374.293
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="slot3"]
+margin_left = -25.0
+margin_top = 5.0
+margin_right = -8.0
+margin_bottom = 22.0
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="address" type="TextEdit" parent="slot3"]
+visible = false
+margin_left = 120.0
+margin_top = -0.353546
+margin_right = 150.0
+margin_bottom = 24.6465
+text = "00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="discard" type="Button" parent="slot3"]
+margin_left = 165.0
+margin_right = 689.0
+margin_bottom = 518.0
+rect_scale = Vector2( 0.05, 0.05 )
+icon = ExtResource( 3 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="typeString" type="Label" parent="slot3"]
+margin_left = 0.71936
+margin_top = 5.96431
+margin_right = 99.7194
+margin_bottom = 22.9643
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IN" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 165.52, 295 )
+scale = Vector2( 0.12, 0.12 )
+normal = ExtResource( 4 )
+script = ExtResource( 8 )
+
+[node name="ADD" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 165.52, 295.667 )
+scale = Vector2( 0.12, 0.12 )
+normal = ExtResource( 5 )
+script = ExtResource( 8 )
+
+[node name="SUB" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 714, 0 )
+scale = Vector2( 0.101035, 0.101035 )
+normal = ExtResource( 10 )
+
+[node name="Intro" type="PopupDialog" parent="."]
+margin_left = 188.612
+margin_top = 121.917
+margin_right = 832.612
+margin_bottom = 427.917
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Intro"]
+margin_left = 16.6299
+margin_top = 16.8105
+margin_right = 628.63
+margin_bottom = 270.811
+custom_fonts/normal_font = SubResource( 1 )
+text = "In this tutorial, we will introduce block-based programming environment in AL Blocky.
+
+Previously, we learnt about the available instruction blocks in tutorial 1. 
+
+It is the time to try utilizing them.
+
+Block-based programming environment helps you to write LMC programs in a convenient way.
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Intro"]
+margin_left = 556.885
+margin_top = 233.085
+margin_right = 1080.89
+margin_bottom = 751.085
+rect_scale = Vector2( 0.1, 0.1 )
+icon = ExtResource( 6 )
+flat = true
+
+[node name="Intro2" type="PopupDialog" parent="."]
+margin_left = 75.3348
+margin_top = 167.656
+margin_right = 529.335
+margin_bottom = 419.656
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Intro2"]
+margin_left = 16.7491
+margin_top = 24.4915
+margin_right = 436.749
+margin_bottom = 238.492
+custom_fonts/normal_font = SubResource( 1 )
+text = "Here we have slots in the right side
+
+Each slot can contain one single block instruction
+
+What you need to do is just drag the block to the desired slot when adding instruction"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Intro2"]
+margin_left = 373.342
+margin_top = 180.645
+margin_right = 897.342
+margin_bottom = 698.645
+rect_scale = Vector2( 0.1, 0.1 )
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Intro4" type="PopupDialog" parent="."]
+margin_left = 75.0
+margin_top = 121.0
+margin_right = 547.0
+margin_bottom = 435.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Intro4"]
+margin_left = 17.0
+margin_top = 24.0
+margin_right = 462.0
+margin_bottom = 300.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Great job! 
+
+For IN / OUT / HLT blocks, the machine code is fixed. 
+
+Therefore, you cannot edit the address with these instruction block. 
+
+In AL Blocky, the address field of these block will be binded. 
+
+
+"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Intro4"]
+margin_left = 395.263
+margin_top = 242.87
+margin_right = 919.263
+margin_bottom = 760.87
+rect_scale = Vector2( 0.1, 0.1 )
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Intro5" type="PopupDialog" parent="."]
+margin_left = 75.0
+margin_top = 121.0
+margin_right = 597.0
+margin_bottom = 435.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Intro5"]
+margin_left = 17.0
+margin_top = 22.0
+margin_right = 497.0
+margin_bottom = 233.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Except IN / OUT / HLT blocks, the address field will be displayed for you to edit the mailbox address.
+
+The address field is located in the right side of the slot.
+
+The available mailbox address of AL Blocky is 0-99
+
+Now let's take a try for editing the address field.
+
+"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Intro5"]
+margin_left = 441.932
+margin_top = 237.213
+margin_right = 965.932
+margin_bottom = 755.213
+rect_scale = Vector2( 0.1, 0.1 )
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Intro7" type="PopupDialog" parent="."]
+margin_left = 74.0
+margin_top = 121.0
+margin_right = 613.0
+margin_bottom = 435.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Intro7"]
+margin_left = 17.0
+margin_top = 22.0
+margin_right = 526.0
+margin_bottom = 233.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Brilliant! 
+
+If you want to delete the block in the slot, discard button will help you do the job.
+
+There is a discard button for every slot in AL Blocky. 
+
+Pressing it will delete the selected block and address in slot.
+
+Now let's try it."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Intro7"]
+margin_left = 441.932
+margin_top = 237.213
+margin_right = 965.932
+margin_bottom = 755.213
+rect_scale = Vector2( 0.1, 0.1 )
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Intro9" type="PopupDialog" parent="."]
+margin_left = 74.0
+margin_top = 121.0
+margin_right = 613.0
+margin_bottom = 435.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Intro9"]
+margin_left = 17.0
+margin_top = 22.0
+margin_right = 526.0
+margin_bottom = 242.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Good Job!
+
+Now you can see the properties of the slot 2 is discarded. 
+
+Except dragging new block to the slot, you can swap between the slot to modify the execution sequence of your program.
+
+Keep pressing the slot, then swipe it to the desired slot position to modify its position.
+
+
+"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Intro9"]
+margin_left = 457.488
+margin_top = 241.456
+margin_right = 981.488
+margin_bottom = 759.456
+rect_scale = Vector2( 0.1, 0.1 )
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Intro11" type="PopupDialog" parent="."]
+margin_left = 74.0
+margin_top = 121.0
+margin_right = 613.0
+margin_bottom = 453.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Intro11"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 525.0
+margin_bottom = 249.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "See? 
+
+It is easy to modify the order of instruction in AL Blocky.
+
+Next, we will talk about the branching reminder feature.
+
+Unlike high-level language, branching in LMC is harder to code.
+
+Branching reminder helps you to foresee which block will be affected by branching block "
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Intro11"]
+margin_left = 459.609
+margin_top = 259.134
+margin_right = 983.609
+margin_bottom = 777.134
+rect_scale = Vector2( 0.1, 0.1 )
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Intro12" type="PopupDialog" parent="."]
+margin_left = 74.0
+margin_top = 121.0
+margin_right = 613.0
+margin_bottom = 453.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Intro12"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 525.0
+margin_bottom = 249.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Branching reminder shows which block might not be executed under branching affection.
+
+The reminder will activate when you put a branching block and typed in a address.
+
+The address need to be bigger than the slot number of the branching instruction
+
+The slot number of the affected block will change to orange for indication."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Intro12"]
+margin_left = 459.609
+margin_top = 259.134
+margin_right = 983.609
+margin_bottom = 777.134
+rect_scale = Vector2( 0.1, 0.1 )
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Intro13" type="PopupDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -168.0
+margin_top = -166.0
+margin_right = 168.0
+margin_bottom = 166.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="Label" parent="Intro13"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 295.0
+margin_bottom = 230.0
+custom_fonts/font = SubResource( 4 )
+text = "That's it!
+
+You are ready to go.
+
+Hope you have fun in AL Blocky!
+
+Happy Coding!!
+
+Press OK to go back to tutorial menu"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Intro13"]
+margin_left = 149.896
+margin_top = 259.841
+margin_right = 673.896
+margin_bottom = 777.841
+rect_scale = Vector2( 0.1, 0.1 )
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Intro6" type="PopupDialog" parent="."]
+margin_left = 75.0
+margin_top = 120.0
+margin_right = 595.0
+margin_bottom = 180.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Intro6"]
+margin_left = 10.0
+margin_top = 17.0
+margin_right = 506.0
+margin_bottom = 49.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Drag the \"ADD\" block to slot 2, then edit the address to 10"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Intro10" type="PopupDialog" parent="."]
+margin_left = 75.0
+margin_top = 120.0
+margin_right = 481.0
+margin_bottom = 180.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Intro10"]
+margin_left = 10.0
+margin_top = 17.0
+margin_right = 408.0
+margin_bottom = 49.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Now try to swap slot 3 to the position of slot 4"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Intro3" type="PopupDialog" parent="."]
+margin_left = 61.0
+margin_top = 110.0
+margin_right = 515.0
+margin_bottom = 175.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Intro3"]
+margin_left = 18.3394
+margin_top = 21.3484
+margin_right = 438.339
+margin_bottom = 86.3484
+custom_fonts/normal_font = SubResource( 1 )
+text = "Now try to drag the \"IN\" block below to the slot 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Intro8" type="PopupDialog" parent="."]
+margin_left = 116.154
+margin_top = 136.163
+margin_right = 463.154
+margin_bottom = 178.163
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Intro8"]
+margin_left = 16.0
+margin_top = 12.0
+margin_right = 336.0
+margin_bottom = 42.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Press the discard button of the slot 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/address_field_anime = SubResource( 2 )
+anims/slot_animation = SubResource( 3 )
+[connection signal="pressed" from="backButton" to="." method="_on_backButton_pressed"]
+[connection signal="mouse_entered" from="slot0" to="." method="_on_slot0_mouse_entered"]
+[connection signal="mouse_entered" from="slot1" to="." method="_on_slot1_mouse_entered"]
+[connection signal="text_changed" from="slot1/address" to="." method="_on_slot1_address_text_changed"]
+[connection signal="pressed" from="slot1/discard" to="." method="_on_slot1_discard_pressed"]
+[connection signal="mouse_entered" from="slot2" to="." method="_on_slot2_mouse_entered"]
+[connection signal="mouse_entered" from="slot3" to="." method="_on_slot3_mouse_entered"]
+[connection signal="pressed" from="Intro/Button" to="." method="_on_Intro_OK_Button_pressed"]
+[connection signal="pressed" from="Intro2/Button" to="." method="_on_intro2_OK_Button_pressed"]
+[connection signal="pressed" from="Intro4/Button" to="." method="_on_intro4_ok_Button_pressed"]
+[connection signal="pressed" from="Intro5/Button" to="." method="_on_intro5_ok_Button_pressed"]
+[connection signal="pressed" from="Intro7/Button" to="." method="_on_intro7_ok_Button_pressed"]
+[connection signal="pressed" from="Intro9/Button" to="." method="_on_intro9_ok_Button_pressed"]
+[connection signal="pressed" from="Intro11/Button" to="." method="_on_intro11_ok_Button_pressed"]
+[connection signal="pressed" from="Intro12/Button" to="." method="_on_intro12_ok_Button_pressed"]
+[connection signal="pressed" from="Intro13/Button" to="." method="_on_intro13_ok_Button_pressed"]

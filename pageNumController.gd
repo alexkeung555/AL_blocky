@@ -70,7 +70,7 @@ func checkBranching():
                 continue
         
         for y in range(10):                                                      
-            if get_parent().get_node("slot" + String(y)).slotDetailsObj[i].typeString == "BRZ" || get_parent().get_node("slot" + String(y)).slotDetailsObj[i].typeString == "BRP":
+            if get_parent().get_node("slot" + String(y)).slotDetailsObj[i].typeString == "BRZ" || get_parent().get_node("slot" + String(y)).slotDetailsObj[i].typeString == "BRP" || get_parent().get_node("slot" + String(y)).slotDetailsObj[i].typeString == " BR":
                 
                 var address = get_parent().get_node("slot" + String(y)).slotDetailsObj[i].address
                 var slotNum = y + (i-1)*10
