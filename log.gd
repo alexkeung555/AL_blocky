@@ -4,8 +4,8 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-var sizeX = 130
-var sizeY = 33
+var sizeX = 200
+var sizeY = 50
 var isDragging : bool = false
 var inX = false
 var inY = false

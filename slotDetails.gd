@@ -111,7 +111,7 @@ func _on_ColorRect_mouse_entered():
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
-        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
+        typeString.set("custom_colors/font_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         in_button.inX = false
         in_button.inY = false
@@ -131,7 +131,7 @@ func _on_ColorRect_mouse_entered():
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
-        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
+        typeString.set("custom_colors/font_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         out_button.inX = false
         out_button.inY = false
@@ -150,7 +150,7 @@ func _on_ColorRect_mouse_entered():
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
-        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
+        typeString.set("custom_colors/font_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         add_button.inX = false
         add_button.inY = false
@@ -169,7 +169,7 @@ func _on_ColorRect_mouse_entered():
         
         color = Color(slotDetailsObj[currentPageNumObj.pageNum].color)
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
-        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
+        typeString.set("custom_colors/font_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         sub_button.inX = false
         sub_button.inY = false
@@ -188,7 +188,7 @@ func _on_ColorRect_mouse_entered():
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
-        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
+        typeString.set("custom_colors/font_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         br_button.inX = false
         br_button.inY = false
@@ -207,7 +207,7 @@ func _on_ColorRect_mouse_entered():
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
-        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
+        typeString.set("custom_colors/font_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         brz_button.inX = false
         brz_button.inY = false
@@ -228,7 +228,7 @@ func _on_ColorRect_mouse_entered():
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
-        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
+        typeString.set("custom_colors/font_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         brp_button.inX = false
         brp_button.inY = false
@@ -250,7 +250,7 @@ func _on_ColorRect_mouse_entered():
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
-        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
+        typeString.set("custom_colors/font_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         lda_button.inX = false
         lda_button.inY = false
@@ -269,7 +269,7 @@ func _on_ColorRect_mouse_entered():
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
-        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
+        typeString.set("custom_colors/font_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         sto_button.inX = false
         sto_button.inY = false
@@ -288,7 +288,7 @@ func _on_ColorRect_mouse_entered():
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
-        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
+        typeString.set("custom_colors/font_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         hlt_button.inX = false
         hlt_button.inY = false
@@ -307,7 +307,7 @@ func _on_ColorRect_mouse_entered():
         
         color = slotDetailsObj[currentPageNumObj.pageNum].color
         typeString.set_text(slotDetailsObj[currentPageNumObj.pageNum].typeString)
-        typeString.set("custom_colors/default_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
+        typeString.set("custom_colors/font_color", slotDetailsObj[currentPageNumObj.pageNum].textColor)
         
         dat_button.inX = false
         dat_button.inY = false

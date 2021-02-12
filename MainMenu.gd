@@ -17,7 +17,7 @@ func _ready():
 
 func sandBox_mode_button_pressed():
     print("Change scene:  Sandbox")
-    get_tree().change_scene("res://testing.tscn")
+    get_tree().change_scene("res://sandbox.tscn")
 
 func task_mode_button_pressed():
     print("Change scene:  task")

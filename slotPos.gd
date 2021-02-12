@@ -98,8 +98,8 @@ func _process(delta):
         
         
         
-        var inSlotOrder = int(desiredPos.y - originalPosYinPageAray[0]) % 40
-        targetSlotNum = int(desiredPos.y - originalPosYinPageAray[0]) / 40
+        var inSlotOrder = int(desiredPos.y - originalPosYinPageAray[0]) % 75
+        targetSlotNum = int(desiredPos.y - originalPosYinPageAray[0]) / 75
         
         
         if previousDirection != direction:
@@ -107,7 +107,7 @@ func _process(delta):
             return
         
             
-        if inSlotOrder <= 3:                                                                                                                    # set value based on rendering speed, lower speed sys might have to set higher value
+        if inSlotOrder <= 6:                                                                                                                    # set value based on rendering speed, lower speed sys might have to set higher value
             
             if targetSlotNum-1 < 0 ||  targetSlotNum > 9:                                       # upper and lower swap limit
                 return
@@ -152,24 +152,24 @@ func _process(delta):
             if direction:
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).color = get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].color                                                          # update slots (down scoll)
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).get_node("typeString").text = get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].typeString
-                get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).get_node("typeString").set("custom_colors/default_color", get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].textColor)
+                get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).get_node("typeString").set("custom_colors/font_color", get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].textColor)
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).get_node("Address").text = get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].address
                 #get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).get_node("Address").set_visible(get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].addressBinding)          # binding address slot
             
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum)).color = Color(1,1,1,1)
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum)).get_node("typeString").text = ""
-                get_parent().get_parent().get_node("slot" + String(targetSlotNum)).get_node("typeString").set("custom_colors/default_color", Color(0,0,0,1))
+                get_parent().get_parent().get_node("slot" + String(targetSlotNum)).get_node("typeString").set("custom_colors/font_color", Color(0,0,0,1))
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum)).address = get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].address
             else:
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum)).color = get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].color                                                          # update slots (up scoll)
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum)).get_node("typeString").text = get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].typeString
-                get_parent().get_parent().get_node("slot" + String(targetSlotNum)).get_node("typeString").set("custom_colors/default_color", get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].textColor)
+                get_parent().get_parent().get_node("slot" + String(targetSlotNum)).get_node("typeString").set("custom_colors/font_color", get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].textColor)
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum)).get_node("Address").text = get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].address
                 #get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).get_node("Address").set_visible(get_parent().get_parent().get_node("slot" + String(targetSlotNum)).slotDetailsObj[pageNum].addressBinding)
             
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).color = Color(1,1,1,1)
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).get_node("typeString").text = ""
-                get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).get_node("typeString").set("custom_colors/default_color", Color(0,0,0,1))
+                get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).get_node("typeString").set("custom_colors/font_color", Color(0,0,0,1))
                 get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).address = get_parent().get_parent().get_node("slot" + String(targetSlotNum-1)).slotDetailsObj[pageNum].address
             
             swapped[targetSlotNum] = true
@@ -229,13 +229,13 @@ func _input(event):
                     var pageNum = get_parent().currentPageNumObj.pageNum
                     get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).color = get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).slotDetailsObj[pageNum].color                                                          # update slots
                     get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).get_node("typeString").text = get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).slotDetailsObj[pageNum].typeString
-                    get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).get_node("typeString").set("custom_colors/default_color", get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).slotDetailsObj[pageNum].textColor)
+                    get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).get_node("typeString").set("custom_colors/font_color", get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).slotDetailsObj[pageNum].textColor)
                     get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).get_node("Address").text = get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock)).slotDetailsObj[pageNum].address
                 else:
                     var pageNum = get_parent().currentPageNumObj.pageNum
                     get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock-1)).color = get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock-1)).slotDetailsObj[pageNum].color                                                          # update slots
                     get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock-1)).get_node("typeString").text = get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock-1)).slotDetailsObj[pageNum].typeString
-                    get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock-1)).get_node("typeString").set("custom_colors/default_color", get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock-1)).slotDetailsObj[pageNum].textColor)
+                    get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock-1)).get_node("typeString").set("custom_colors/font_color", get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock-1)).slotDetailsObj[pageNum].textColor)
                     get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock-1)).get_node("Address").text = get_parent().get_parent().get_node("slot" + String(slotNumForDroppingBlock-1)).slotDetailsObj[pageNum].address
                 
                 

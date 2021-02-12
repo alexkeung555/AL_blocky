@@ -13,7 +13,7 @@ var blockLinkedList
 # Called when the node enters the scene tree for the first time.
 func _ready():
     draggingIconIsDisplaying = false
-    get_node("hintTextDisplayer").push_align(3)
+    
     reset_LMC_linkedList()
     
     #blockLinkedList.insertNode(0,901)
