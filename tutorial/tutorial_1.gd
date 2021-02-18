@@ -16,6 +16,9 @@ func _ready():
     #$AnimationPlayer.play("tut1_anime_IN")
     #$AnimationPlayer.play_backwards("tut1_anime_IN")
 
+func _on_backButton_pressed():
+    print("Change scene: Tutorial Menu")
+    get_tree().change_scene("res://tutorialMenu.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -25,16 +28,9 @@ func reversedAnime():
     if currentShowBlock != "":
         $AnimationPlayer2.play_backwards("tut1_anime_" + currentShowBlock)
     else:
-        semaphoreForAnimePlayer2 = false
-        
-
-func _on_backButton_pressed():
-    print("Change scene: Tutorial Menu")
-    get_tree().change_scene("res://tutorialMenu.tscn")
+        semaphoreForAnimePlayer2 = false                                    # first play, animationPlayer 2 no need to play at first
 
 func setSemaphoreTrue():
-    
-    
     semaphoreForAnimePlayer1 = true
     semaphoreForAnimePlayer2 = true
 
@@ -46,11 +42,11 @@ func checkSemaphore():
 
 func _on_AnimationPlayer_animation_finished(anim_name):
     semaphoreForAnimePlayer1 = false
-    print("Animeplayer1 finished")
+    #print("Animeplayer1 finished")
 
 func _on_AnimationPlayer2_animation_finished(anim_name):
     semaphoreForAnimePlayer2 = false
-    print("Animeplayer2 finished")
+    #print("Animeplayer2 finished")
 
 
 func _on_IN_pressed():

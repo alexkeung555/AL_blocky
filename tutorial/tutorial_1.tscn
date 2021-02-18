@@ -19,6 +19,302 @@
 size = 31
 font_data = ExtResource( 3 )
 
+[sub_resource type="Animation" id=2]
+resource_name = "tut1_anime_ADD"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ADD:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 431, 775 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ADD_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "tut1_anime_BR"
+tracks/0/type = "value"
+tracks/0/path = NodePath("BR:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 992, 775 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BR_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "tut1_anime_BRP"
+tracks/0/type = "value"
+tracks/0/path = NodePath("BRP:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 992, 972 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BRP_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "tut1_anime_BRZ"
+tracks/0/type = "value"
+tracks/0/path = NodePath("BRZ:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 992, 874 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BRZ_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "tut1_anime_DAT"
+tracks/0/type = "value"
+tracks/0/path = NodePath("DAT:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1551, 775 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("DAT_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "tut1_anime_HLT"
+tracks/0/type = "value"
+tracks/0/path = NodePath("HLT:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1280, 775 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HLT_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=8]
+tracks/0/type = "value"
+tracks/0/path = NodePath("IN:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 150, 775 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IN_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "tut1_anime_LDA"
+tracks/0/type = "value"
+tracks/0/path = NodePath("LDA:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 717, 775 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LDA_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "tut1_anime_OUT"
+tracks/0/type = "value"
+tracks/0/path = NodePath("OUT:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 150, 895 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("OUT_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "tut1_anime_STO"
+tracks/0/type = "value"
+tracks/0/path = NodePath("STO:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 717, 895 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("STO_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "tut1_anime_SUB"
+tracks/0/type = "value"
+tracks/0/path = NodePath("SUB:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 431, 895 ), Vector2( 510, 460 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SUB_infoText:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
 [sub_resource type="Animation" id=13]
 resource_name = "tut1_anime_ADD"
 tracks/0/type = "value"
@@ -315,302 +611,6 @@ tracks/1/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=25]
-resource_name = "tut1_anime_ADD"
-tracks/0/type = "value"
-tracks/0/path = NodePath("ADD:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 431, 775 ), Vector2( 510, 460 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("ADD_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=26]
-resource_name = "tut1_anime_BR"
-tracks/0/type = "value"
-tracks/0/path = NodePath("BR:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 992, 775 ), Vector2( 510, 460 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("BR_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=27]
-resource_name = "tut1_anime_BRP"
-tracks/0/type = "value"
-tracks/0/path = NodePath("BRP:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 992, 972 ), Vector2( 510, 460 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("BRP_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=28]
-resource_name = "tut1_anime_BRZ"
-tracks/0/type = "value"
-tracks/0/path = NodePath("BRZ:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 992, 874 ), Vector2( 510, 460 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("BRZ_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=29]
-resource_name = "tut1_anime_DAT"
-tracks/0/type = "value"
-tracks/0/path = NodePath("DAT:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1551, 775 ), Vector2( 510, 460 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("DAT_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=30]
-resource_name = "tut1_anime_HLT"
-tracks/0/type = "value"
-tracks/0/path = NodePath("HLT:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1280, 775 ), Vector2( 510, 460 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("HLT_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=31]
-tracks/0/type = "value"
-tracks/0/path = NodePath("IN:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 150, 775 ), Vector2( 510, 460 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("IN_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=32]
-resource_name = "tut1_anime_LDA"
-tracks/0/type = "value"
-tracks/0/path = NodePath("LDA:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 717, 775 ), Vector2( 510, 460 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("LDA_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=33]
-resource_name = "tut1_anime_OUT"
-tracks/0/type = "value"
-tracks/0/path = NodePath("OUT:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 150, 895 ), Vector2( 510, 460 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("OUT_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=34]
-resource_name = "tut1_anime_STO"
-tracks/0/type = "value"
-tracks/0/path = NodePath("STO:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 717, 895 ), Vector2( 510, 460 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("STO_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="Animation" id=35]
-resource_name = "tut1_anime_SUB"
-tracks/0/type = "value"
-tracks/0/path = NodePath("SUB:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 431, 895 ), Vector2( 510, 460 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("SUB_infoText:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
 [sub_resource type="DynamicFont" id=24]
 size = 30
 font_data = ExtResource( 3 )
@@ -798,6 +798,19 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/tut1_anime_ADD = SubResource( 2 )
+anims/tut1_anime_BR = SubResource( 3 )
+anims/tut1_anime_BRP = SubResource( 4 )
+anims/tut1_anime_BRZ = SubResource( 5 )
+anims/tut1_anime_DAT = SubResource( 6 )
+anims/tut1_anime_HLT = SubResource( 7 )
+anims/tut1_anime_IN = SubResource( 8 )
+anims/tut1_anime_LDA = SubResource( 9 )
+anims/tut1_anime_OUT = SubResource( 10 )
+anims/tut1_anime_STO = SubResource( 11 )
+anims/tut1_anime_SUB = SubResource( 12 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
 anims/tut1_anime_ADD = SubResource( 13 )
 anims/tut1_anime_BR = SubResource( 14 )
 anims/tut1_anime_BRP = SubResource( 15 )
@@ -809,19 +822,6 @@ anims/tut1_anime_LDA = SubResource( 20 )
 anims/tut1_anime_OUT = SubResource( 21 )
 anims/tut1_anime_STO = SubResource( 22 )
 anims/tut1_anime_SUB = SubResource( 23 )
-
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
-anims/tut1_anime_ADD = SubResource( 25 )
-anims/tut1_anime_BR = SubResource( 26 )
-anims/tut1_anime_BRP = SubResource( 27 )
-anims/tut1_anime_BRZ = SubResource( 28 )
-anims/tut1_anime_DAT = SubResource( 29 )
-anims/tut1_anime_HLT = SubResource( 30 )
-anims/tut1_anime_IN = SubResource( 31 )
-anims/tut1_anime_LDA = SubResource( 32 )
-anims/tut1_anime_OUT = SubResource( 33 )
-anims/tut1_anime_STO = SubResource( 34 )
-anims/tut1_anime_SUB = SubResource( 35 )
 
 [node name="IN_infoText" type="RichTextLabel" parent="."]
 visible = false
@@ -1022,3 +1022,5 @@ __meta__ = {
 [connection signal="pressed" from="BRP" to="." method="_on_BRP_pressed"]
 [connection signal="pressed" from="DAT" to="." method="_on_DAT_pressed"]
 [connection signal="pressed" from="HLT" to="." method="_on_HLT_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer2" to="." method="_on_AnimationPlayer2_animation_finished"]
