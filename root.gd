@@ -8,6 +8,8 @@ var draggingIconIsDisplaying
 
 const LinkedList = preload("LinkedList.gd")
 var blockLinkedList 
+const Excution = preload("Excution.gd")
+var Excution1 
 
 
 # Called when the node enters the scene tree for the first time.
@@ -57,6 +59,9 @@ func compile_LMC():
                 blockLinkedList.insertNode( slot, opCode + address)                  # add to linkedList
     
     get_node("/root/generatedLMC").set_LMC_linkedList(blockLinkedList)        # upload the global linkList
+    Excution1 = Excution.Executor.new()                                                                              # re-init linkedList
+    Excution1._init()
+    Excution1.List_ToArr(blockLinkedList);
     #print(blockLinkedList.printall())
 
 func changeChildIndex(node, index):
