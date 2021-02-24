@@ -44,16 +44,13 @@ class Excutor:
     func List_ToArr(List):
         if (List.next ==null):
             return null;
+        for i in (100):
+            listarray.insert(i," ");
         var currNode = List.next;
-        var count = 1;
-        listarray.insert(int(currNode.index),currNode.data);
+        listarray[int(currNode.index)] = currNode.data;
         while (currNode.nextNode != null):
             currNode = currNode.nextNode
-            while(count!=currNode.index):
-                listarray.insert(count," ");
-                count+=1;
-            listarray.insert(int(currNode.index),currNode.data);
-            count +=1;
+            listarray[int(currNode.index)] = currNode.data;
         return listarray;
         
         
